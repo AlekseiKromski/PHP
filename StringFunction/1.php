@@ -42,15 +42,25 @@
 	$str = '<i>Привет</i>, мое имя <b>Гриша из Растова</b><script>alert("xss")</script>';	
 	echo strip_tags($str);
 	//echo $str;
-	*/
+
 	$str = 'hellow';
 	$str = 'Привет';
 	echo mb_strlen($str);
-
-
-
-
-
-
+	
+	$str = 'Привет';
+	echo mb_strpos($str, 'П');
+	
+	$str = 'Привет';
+	$str2 = 'ПРИВЕТ';
+	echo mb_strtoupper($str);
+	echo "<br>";
+	echo mb_strtolower($str2);
+	
+	$str = 'Привет!';
+	echo mb_substr($str, 0, -1);
+	*/
+	$str = '<i>Привет</i>, мое имя <b>Гриша из Растова</b><script>';
+	echo htmlspecialchars($str);
+	//нужно для безопасности
 
 
