@@ -1,8 +1,13 @@
 <?php
-require_once 'classes/File.php';
+require_once 'classes/car.php';
 
-$file = new File(__DIR__ . '\file.txt');
-$file->write('Строка 1');
-$file->write('Строка 2');
-$file->write('Строка 3');
-$file->write('Строка 4');
+
+function debug($data){
+	echo "<pre>" . print_r($data,1) . "</pre>";
+}
+
+$car1 = new car("Черный",4,180,'BMW');
+
+echo car::$countcar;
+
+echo $car1->getCarInfo();
