@@ -1,8 +1,12 @@
 <?php
-require_once 'classes/File.php';
+require_once 'classes/Write.php';
+$txt = 'something';
 
-$file = new File(__DIR__ . '\file.txt');
-$file->write('Строка 1');
-$file->write('Строка 2');
-$file->write('Строка 3');
-$file->write('Строка 4');
+
+$first = new write();
+$first-> some_text = 'something';
+$first-> file_name = '1';
+$first ->write_text();
+
+
+

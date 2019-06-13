@@ -9,18 +9,33 @@ class car
 	//свойства
 
 	public $color;
-	public $wheels = 4;
-	public $speed = 120;
+	public $wheels;
+	public $speed;
 	public $brand;
-	
-	//$this - обращение к свойству класса в методе 
+        public $year;
+	public static $carCount = 0;
+        
+        const Test_car = 'Прототип';
+        const Test_car_speed = 300;
 
-	public static $countcar = 0;
+        //$this - обращение к свойству класса в методе 
+        
+        public function __construct($color,$wheels,$speed,$brand,$year) { //Функция, которая описана в классе  
+            //echo __METHOD__ . '<br>'; //Выводин информацию метода
+            //$color - значение, которое получила функция
+            // эти свойства пренадлежат объекту 
+            $this->color = $color; //получаем доступ к свойству объекта
+            $this->wheels = $wheels;
+            $this->speed = $speed;
+            $this->brand = $brand;
+            $this->year= $year;
+            // эти свойства принадлежат классу
+            //КОП - классо ориентированное программирование 
+            self::$carCount++;
+        }
 
-	public static function getCount(){
-	}
 
-	public function getCarInfo(){
+        public function getCarInfo(){
 		return "<h3>Мое авто:</h3>
 			Марка: {$this->brand}<br>
 			Цвет: {$this->color} <br>
@@ -28,13 +43,17 @@ class car
 			Год: {$this->year} <br>
 			Коль-во колес: {$this->wheels} ";		
 	}
-
-	public function __construct($color,$wheels,$speed,$brand){
-		$this -> color = $color;
-		$this -> wheels = $wheels;
-		$this -> speed = $speed;
-		$this -> brand = $brand;
-		self::$countcar++;
-
-	}
+        public static function getCount(){
+           return self::$carCount;
+           
+        }
+        public function test(){
+            echo 'hellow';
+            
+        }
+        public function GetProtoInfo(){
+            return "<h3>Данные тестового авто: </h3>
+			имя : " . self::Test_car . "<br>
+                        Скорость : " . self::Test_car_speed . "<br>";
+        }
 }
