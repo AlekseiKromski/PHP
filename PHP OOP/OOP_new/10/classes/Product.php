@@ -1,14 +1,10 @@
 <?php
-class Product{
+abstract class Product{
     public $name;
     protected $price;
-    //3 Разным моидификатора доступа
-    //public $public = 'public';
-    //private $private = 'private'; // Доступны только в классе 
-    //protected  $protected = 'protected'; // Доступны только в классе и его расширениях
+    private $discount = 10;
     
-    private      $discount = 10;
-    
+    const TEST = 10;
 
     public function __construct($name, $price, $cpu = null, $num_pages = null) {
         $this->name = $name;
@@ -28,4 +24,13 @@ class Product{
                 . "Нименование: $this->name <br>"
                 . "Цена со скидкой: {$this->getPrice()} <br>";
     }
+    public function getDiscount(){
+        return $this->discount;
+    }
+    public function setDiscount(){
+        $this->discount = $discount;
+    }
+    // Абстрактные классы нужны для того, чтобы мы не могли создать от них экземпляра
+    // *Класс должен быть абстрактным, если там есть хоть один абстрактный метод
+    abstract protected function addProduct($name, $price,$num_pages);
 }
