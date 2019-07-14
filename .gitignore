@@ -1,4 +1,3 @@
-.idea/
 /nbproject/private/
 /nbproject
-.gitignore
+/.gitignore
