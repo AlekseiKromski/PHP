@@ -51,7 +51,7 @@ class book extends Product implements I3D{
         return $this->getProduct();
     }
     
-    public function __get($name) {
+    public function __get($name) { //При образении к неопредленномк свойству
         var_dump($name);
     }
     public function __set($name,$value) {
