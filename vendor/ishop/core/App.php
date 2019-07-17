@@ -24,6 +24,7 @@ class App {
         self::$app = Registry::instance(); //App контейнер, в который записан объект рееастра
         $this->getParams();
         new ErrorHandler();
+        Router::dispatch($query);
         
     }
     protected function getParams(){
