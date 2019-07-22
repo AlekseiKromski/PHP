@@ -11,11 +11,11 @@ class Registry
     public static $properties = [];
 
     //Заполняет значениями массив
-    public static function setProperty($name, $value){
+    public function setProperty($name, $value){
         self::$properties[$name] = $value;
     }
 
-    //
+    //Выводит массив значений, если в нем что-то есть
     public function getProperty($name){
         if(isset(self::$properties[$name])){
             return self::$properties[$name];
