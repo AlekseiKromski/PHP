@@ -5,4 +5,6 @@ require_once LIBS . '/functions.php';
 
 new App();
 App::$app->setProperty('test', 'test');
-debug(App::$app->getProperties());
+//debug(App::$app->getProperties());
+
+throw new Exception('Страница не найдена',500);

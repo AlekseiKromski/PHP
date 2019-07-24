@@ -16,8 +16,8 @@ class App
 
         //Обращается в TSingleton и создаеться объект
         self::$app = Registry::instance();
-
         $this->getParams();
+        new ErrorHandler();
     }
 
     //Функция из определенного получает массив, который проверяеться на то, пустой ли он

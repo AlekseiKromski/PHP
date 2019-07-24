@@ -9,6 +9,7 @@ define("LIBS", CORE . '/libs');
 define("CACHE", ROOT . '/tmp/cache');
 define("CONF", ROOT . '/config');
 define("LAYOUT", ROOT . 'default');
+define("ERROR_CSS", '/errors/css/style.css');
 
 //Обработка константы PATH
 
