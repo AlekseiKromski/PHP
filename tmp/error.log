@@ -10,3 +10,121 @@
 -----------------------------
 [2019-07-26 13:12:46] Текст: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка: 10
 -----------------------------
+[2019-07-26 14:11:52] Текст: syntax error, unexpected '}', expecting ',' or ';' | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 36
+-----------------------------
+[2019-07-26 14:11:53] Текст: syntax error, unexpected '}', expecting ',' or ';' | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 36
+-----------------------------
+[2019-07-26 14:14:21] Текст: Call to undefined method app\controllers\PageController::getView() | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 44
+-----------------------------
+[2019-07-26 14:19:35] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:47] Текст: Не найден шаблон C:\OSPanel\domains\PHP/default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:49] Текст: Не найден шаблон C:\OSPanel\domains\PHP/default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:49] Текст: Не найден шаблон C:\OSPanel\domains\PHP/default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:50] Текст: Не найден шаблон C:\OSPanel\domains\PHP/default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:54] Текст: Не найден шаблон C:\OSPanel\domains\PHP\default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:54] Текст: Не найден шаблон C:\OSPanel\domains\PHP\default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:55] Текст: Не найден шаблон C:\OSPanel\domains\PHP\default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:55] Текст: Не найден шаблон C:\OSPanel\domains\PHP\default | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:20:58] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:21:09] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:04] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:04] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:05] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:05] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:05] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:18] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:19] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:20] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:20] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:38] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:39] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:40] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:40] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:40] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:41] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:41] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:41] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:41] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:42] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:42] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:42] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:22:43] Текст: Не найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:24:12] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:12] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:13] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:13] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:13] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:14] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:14] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:14] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:14] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:21] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:24:22] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:25:26] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:25:27] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:25:34] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 50
+-----------------------------
+[2019-07-26 14:25:50] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:25:54] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:28:28] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:28:29] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:28:29] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:28:31] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:29:12] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:29:13] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------
+[2019-07-26 14:29:14] Текст: На найден шаблон C:\OSPanel\domains\PHPdefault | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка: 51
+-----------------------------

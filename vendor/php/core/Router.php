@@ -34,12 +34,14 @@ class Router
             //Проверка на существование класса
             if(class_exists($controller)){
                 //Создаем объект и передаем в него параметр $route
+
                 $controllerObject = new $controller(self::$route);
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 //Проверка на существование метода
                 if(method_exists($controllerObject, $action)){
                     //Вызывает action у объекта $controllerObject
                     $controllerObject->$action();
+                    $controllerObject->getView();
                 }else{
                     throw new \Exception("Метод $controller::$action не найден", 404);
                 }

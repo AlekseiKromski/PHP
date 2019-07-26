@@ -6,8 +6,8 @@ namespace app\controllers;
 
 class MainController extends AppController
 {
-    public function indexAction(){
-        debug($this->route);
 
+    public function indexAction(){
+        $this->setMeta('Default','heeelololo','kse sef lfse');
     }
 }

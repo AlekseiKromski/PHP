@@ -13,6 +13,7 @@ abstract class Controller{
     public $prefix;
     public $data = [];
     public $meta = [];
+    public $layout;
 
     public function __construct($route)
     {
@@ -21,6 +22,11 @@ abstract class Controller{
         $this->view = $route['action'];
         $this->prefix = $route['prefix'];
         $this->model = $route['controller'];
+    }
+
+    public function getView(){
+        $viewObject = new View($this->route, $this->layout,$this->view, $this->meta);
+        $viewObject->render($this->data);
     }
 
     public function set($data){
