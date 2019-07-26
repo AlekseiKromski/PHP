@@ -1,0 +1,12 @@
+[2019-07-26 12:58:43] Текст: Странница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 52
+-----------------------------
+[2019-07-26 12:59:11] Текст: Контроллер app\controllers\PostsController не найден | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 48
+-----------------------------
+[2019-07-26 13:00:29] Текст: Контроллер app\controllers\PostsController не найден | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 48
+-----------------------------
+[2019-07-26 13:00:30] Текст: Контроллер app\controllers\PostsController не найден | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 48
+-----------------------------
+[2019-07-26 13:12:45] Текст: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка: 10
+-----------------------------
+[2019-07-26 13:12:46] Текст: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка: 10
+-----------------------------

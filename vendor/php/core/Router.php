@@ -35,7 +35,6 @@ class Router
             if(class_exists($controller)){
                 //Создаем объект и передаем в него параметр $route
                 $controllerObject = new $controller(self::$route);
-                //Пример: indexAction
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 //Проверка на существование метода
                 if(method_exists($controllerObject, $action)){
