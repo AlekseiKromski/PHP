@@ -136,3 +136,11 @@
 -----------------------------
 [2019-07-31 13:31:10] Текст: Метод app\controllers\PageController::viewAction не найден | Файл: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка: 48
 -----------------------------
+[2019-07-31 13:57:32] Текст: syntax error, unexpected '.', expecting ',' or ';' | Файл: C:\OSPanel\domains\PHP\app\models\AppModel.php | Строка: 6
+-----------------------------
+[2019-07-31 13:57:39] Текст: syntax error, unexpected '.', expecting ',' or ';' | Файл: C:\OSPanel\domains\PHP\app\models\AppModel.php | Строка: 6
+-----------------------------
+[2019-07-31 13:57:40] Текст: syntax error, unexpected '.', expecting ',' or ';' | Файл: C:\OSPanel\domains\PHP\app\models\AppModel.php | Строка: 6
+-----------------------------
+[2019-07-31 13:58:31] Текст: Class 'php\base\Db' not found | Файл: C:\OSPanel\domains\PHP\vendor\php\core\base\model.php | Строка: 16
+-----------------------------
