@@ -12,5 +12,7 @@
 <body>
     <h1>Шаблон Default</h1>
     <? echo $content; ?>
+    <p><?php  echo $name;?></p>
+    <p><?php  echo $age;?></p>
 </body>
 </html>

@@ -24,6 +24,9 @@ abstract class Controller{
         $this->model = $route['controller'];
     }
 
+    /*
+     * Метод, который получает объект вида и вызываать рендер
+     * */
     public function getView(){
         $viewObject = new View($this->route, $this->layout,$this->view, $this->meta);
         $viewObject->render($this->data);
@@ -31,7 +34,6 @@ abstract class Controller{
 
     public function set($data){
         $this->data = $data;
-
     }
 
     public function setMeta($title='',$desc = '', $keywords = ''){
