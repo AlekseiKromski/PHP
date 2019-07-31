@@ -29,6 +29,7 @@ class Router
     //Принемает url адресс, будет вызывать метод matchRoute
     //И в зависимости от того, что вернет matchRoute, будет вызывать контроллер
     public static function dispatch($url){
+        $url = self::removeQueryString($url);
         if(self::matchRoute($url)){
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
             //Проверка на существование класса
@@ -99,4 +100,17 @@ class Router
         return lcfirst(self::upperCamelCase($name));
 
     }
+
+    protected static function removeQueryString($url){
+        if($url){
+            $params = explode('&', $url, 2);
+            debug($params);
+            if(false === strpos($params[0],'=')){
+                return rtrim($params[0],'/');
+            }else{
+                return '';
+            }
+        }
+    }
+
 }

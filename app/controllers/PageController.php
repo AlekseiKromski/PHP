@@ -4,7 +4,7 @@
 namespace app\controllers;
 
 
-class PageController
+class PageController extends AppController
 {
     public function __construct($route)
     {
