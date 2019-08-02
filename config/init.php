@@ -8,7 +8,7 @@ define("CORE", ROOT . '/vendor/php/core');
 define("LIBS", CORE . '/libs');
 define("CACHE", ROOT . '/tmp/cache');
 define("CONF", ROOT . '/config');
-define("LAYOUT", 'default');
+define("LAYOUT", 'watches');
 define("ERROR_CSS", '/errors/css/style.css');
 
 //Обработка константы PATH
