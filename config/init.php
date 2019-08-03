@@ -18,6 +18,17 @@ define('CACHE' , ROOT . '/tmp/cache');
 define('CONF' , ROOT . '/config');
 //Хранение расоположения шаблона сайта по умолчанию
 define('LAYOUT' , 'default');
-//Путь к папке кеша
-define('CACHE' , ROOT . '/tmp/cache');
 
+//http://php/public/index.php
+$app_path = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}";
+//http://php/public/
+$app_path = preg_replace('#[^/]+$#','',$app_path);
+//http://php
+$app_path = str_replace('/public/','',$app_path);
+
+//Константа, которая хранит путь к index файлу
+define('PATH', $app_path);
+//Путь к папке администратора
+define('ADMIN', PATH . '/admin');
+
+require_once ROOT . "/vendor/autoload.php";
