@@ -17,6 +17,7 @@ class App
         session_start();
         self::$app = Registry::instance(); //Теперь свойство $app хранит в себе объект реестра
         $this->getParamas(); //Вызываем метод, который перенесет массив значений из файла конфиг. в свойсвто $params в классе Registry
+        new ErrorHandler(); //Все исключения будет обрабатывать наш собственный обработчик
     }
 
     protected function getParamas()
