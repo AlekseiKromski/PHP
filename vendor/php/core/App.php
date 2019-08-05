@@ -9,7 +9,7 @@ namespace php;
 class App
 {
 
-    public static $app; //Свойство класса, в котором будут храниться какие-то параметры приложения
+    public static $app; //Свойство класса, в котором будут храниться объект параметров приложения
 
     public function __construct()
     {
