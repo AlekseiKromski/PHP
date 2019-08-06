@@ -4,7 +4,9 @@
 namespace app\controllers;
 
 
-class App
+use php\base\Controller;
+
+class AppController extends Controller
 {
 
 }

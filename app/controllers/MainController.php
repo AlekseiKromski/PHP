@@ -4,11 +4,12 @@
 namespace app\controllers;
 
 
-class MainController
+class MainController extends AppController
 {
 
     public function indexAction(){
-        echo 'dsdf';
+        debug($this->route);
+        $this->setMeta('Ничего','adasdasd','adsadadad');
     }
 
 }

@@ -212,3 +212,5 @@
 ------------------------
 [2019-08-06 10:37:43] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
 ------------------------
+[2019-08-06 11:00:54] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
