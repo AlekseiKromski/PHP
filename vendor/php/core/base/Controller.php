@@ -13,7 +13,7 @@ abstract class controller
     public $model;
     public $prefix;
     public $data = []; //Обычные данные
-    public $meta = []; //Мета данные
+    public $meta = ['title' => '','desc' => '','keywords' => '']; //Мета данные
     public $layout;
 
     public function __construct($route)

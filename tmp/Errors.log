@@ -242,3 +242,17 @@
 ------------------------
 [2019-08-06 18:09:05] Текст ошибки: Шаблон C:\OSPanel\domains\PHP/app/views/Layouts/test.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 48 
 ------------------------
+[2019-08-06 18:24:03] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:26:57] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:30:44] Текст ошибки: Call to undefined method app\controllers\MainController::getMeta() | Файл ошибки: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка ошибки: 14 
+------------------------
+[2019-08-06 18:35:21] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:35:46] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:41:38] Текст ошибки: Class 'app\controllers\App' not found | Файл ошибки: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка ошибки: 13 
+------------------------
+[2019-08-06 18:41:55] Текст ошибки: Call to undefined method php\Registry::getPrperty() | Файл ошибки: C:\OSPanel\domains\PHP\app\controllers\MainController.php | Строка ошибки: 13 
+------------------------
