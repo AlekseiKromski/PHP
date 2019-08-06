@@ -134,3 +134,81 @@
 ------------------------
 [2019-08-06 09:36:28] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\public\index.php | Строка ошибки: 11 
 ------------------------
+[2019-08-06 10:13:08] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:13:12] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:13:12] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:13:22] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:16:22] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:16:38] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 32 
+------------------------
+[2019-08-06 10:20:19] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:20:26] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:21:31] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:21:32] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:21:41] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:21:53] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:22:39] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:22:50] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:23:01] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:23:02] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:23:10] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:24:45] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:24:51] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:24:51] Текст ошибки: Class 'mysql_xdevapi\Exception' not found | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:25:11] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:25:11] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 33 
+------------------------
+[2019-08-06 10:31:10] Текст ошибки: Контроллер не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:31:10] Текст ошибки: Контроллер не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:31:16] Текст ошибки: Контроллер не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:34:46] Текст ошибки: Метод indexAction в app\controllers\PageNewController не был найден не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:34:56] Текст ошибки: Метод indexAction в app\controllers\PageNewController не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:35:24] Текст ошибки: Access to undeclared static property: app\controllers\PageNewController::$action | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:35:25] Текст ошибки: Access to undeclared static property: app\controllers\PageNewController::$action | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:35:32] Текст ошибки: Метод в app\controllers\PageNewController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:35:57] Текст ошибки: Метод в app\controllers\PageNewController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:36:06] Текст ошибки: Контроллер app\controllers\MainController не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 40 
+------------------------
+[2019-08-06 10:36:20] Текст ошибки: Метод в app\controllers\MainController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:36:22] Текст ошибки: Метод в app\controllers\MainController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:36:23] Текст ошибки: Метод в app\controllers\MainController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:37:21] Текст ошибки: Контроллер app\controllers\ViewController не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 40 
+------------------------
+[2019-08-06 10:37:31] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 43 
+------------------------
+[2019-08-06 10:37:38] Текст ошибки: Метод в app\controllers\PageController::actionAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------
+[2019-08-06 10:37:43] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
+------------------------

@@ -8,4 +8,4 @@ require_once CONF . '/routes.php';
 
 new App();
 
-debug(Router::getRoutes());
+//debug(Router::getRoutes());
