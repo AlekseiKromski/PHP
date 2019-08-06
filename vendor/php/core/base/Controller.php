@@ -14,6 +14,7 @@ abstract class controller
     public $prefix;
     public $data = []; //Обычные данные
     public $meta = []; //Мета данные
+    public $layout;
 
     public function __construct($route)
     {
@@ -32,6 +33,11 @@ abstract class controller
         $this->meta['title'] = $title;
         $this->meta['desc'] = $desc;
         $this->meta['keywords'] = $keywords;
+    }
+
+    public function getView(){
+        $viewObject = new View($this->route,$this->layout,$this->view,$this->meta);
+        $viewObject->render($this->data);
     }
 
 }

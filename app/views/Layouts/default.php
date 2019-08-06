@@ -9,5 +9,7 @@
 </head>
 <body>
     <h1>Шаблон DEFAULT</h1>
+    <?php echo $content;?>
+    <?php debug($this->meta);?>
 </body>
 </html>

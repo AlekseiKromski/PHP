@@ -18,7 +18,7 @@ define('CACHE' , ROOT . '/tmp/cache');
 define('CONF' , ROOT . '/config');
 //Хранение расоположения шаблона сайта по умолчанию
 define('LAYOUT' , 'default');
-define('ERRORS_STYLES', 'Errors/404/css');
+define('ERRORS_STYLES', ROOT . '/public/Errors/404/css');
 
 //http://php/public/index.php
 $app_path = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}";

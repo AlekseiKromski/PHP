@@ -31,4 +31,26 @@ class View
         }
     }
 
+    public function render($data){
+        $viewFile = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
+        if(is_file($viewFile)){
+            ob_start();
+            require_once $viewFile;
+            $content = ob_get_clean();
+        }else{
+            throw new \Exception ("Вида {$viewFile} не найден",404);
+        }
+        if(false !== $this->layout){
+            $layoutFile = APP . "/views/Layouts/{$this->layout}.php";
+            if(is_file($layoutFile)){
+                require_once $layoutFile;
+            }else{
+                throw new \Exception ("Шаблон {$layoutFile} не найден",404);
+            }
+        }
+    }
+    public function getMeta(){
+
+    }
+
 }

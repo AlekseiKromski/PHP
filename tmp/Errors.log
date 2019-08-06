@@ -214,3 +214,31 @@
 ------------------------
 [2019-08-06 11:00:54] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 37 
 ------------------------
+[2019-08-06 17:54:54] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 17:59:52] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 38 
+------------------------
+[2019-08-06 17:59:59] Текст ошибки: Метод в app\controllers\PageController::indexAction не был найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 38 
+------------------------
+[2019-08-06 18:00:29] Текст ошибки: Call to undefined method app\controllers\PageController::getView() | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 36 
+------------------------
+[2019-08-06 18:00:30] Текст ошибки: Call to undefined method app\controllers\PageController::getView() | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 36 
+------------------------
+[2019-08-06 18:00:50] Текст ошибки: Call to undefined function Exception() | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 39 
+------------------------
+[2019-08-06 18:01:13] Текст ошибки: Вида C:\OSPanel\domains\PHP/app/views/Page/index.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 39 
+------------------------
+[2019-08-06 18:01:27] Текст ошибки: Вида C:\OSPanel\domains\PHP/app/views/Page/index.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 39 
+------------------------
+[2019-08-06 18:01:27] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:01:28] Текст ошибки: Вида C:\OSPanel\domains\PHP/app/views/Page/index.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 39 
+------------------------
+[2019-08-06 18:01:28] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:01:34] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 44 
+------------------------
+[2019-08-06 18:02:26] Текст ошибки: Вида C:\OSPanel\domains\PHP/app/views/Page/index.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 39 
+------------------------
+[2019-08-06 18:09:05] Текст ошибки: Шаблон C:\OSPanel\domains\PHP/app/views/Layouts/test.php не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\base\View.php | Строка ошибки: 48 
+------------------------
