@@ -1,4 +1,3 @@
-
-<h1>Heloow</h1>
-<h2><?php echo $name;?></h2>
-<h2><?php echo $age;?></h2>
+<?php foreach($posts as $post): ?>
+    <h3><?=$post->tit;?></h3>
+<?php endforeach; ?>

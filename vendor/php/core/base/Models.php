@@ -4,6 +4,8 @@
 namespace php\base;
 
 
+use php\Db;
+
 abstract class Models
 {
 
@@ -13,6 +15,7 @@ abstract class Models
 
     public function __construct()
     {
+        Db::instance();
 
     }
 
