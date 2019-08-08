@@ -25,7 +25,7 @@ class Router
         return self::$route;
     }
 
-    public static function dispath($url){
+    public static function dispatch($url){
         $url = self::removeQueryString($url);
         if(self::matchRoute($url)){
             $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
@@ -36,20 +36,20 @@ class Router
                     $controllerObject->$action();
                     $controllerObject->getView();
                 }else{
-                    throw  new \Exception("Метод в $controller::$action не был найден",404);
+                    throw new \Exception("Метод $controller::$action не найден", 404);
                 }
             }else{
-                throw  new \Exception("Контроллер {$controller} не найден",404);
+                throw new \Exception("Контроллер $controller не найден", 404);
             }
         }else{
-            throw  new \Exception('Страница не найдена',404);
+            throw new \Exception("Страница не найдена", 404);
         }
     }
 
     public static function matchRoute($url){
-        foreach (self::$routes as $pattern => $route){
+        foreach(self::$routes as $pattern => $route){
             if(preg_match("#{$pattern}#", $url, $matches)){
-                foreach ($matches as $k => $v) {
+                foreach($matches as $k => $v){
                     if(is_string($k)){
                         $route[$k] = $v;
                     }
@@ -69,17 +69,15 @@ class Router
         }
         return false;
     }
-    //CamelCase
-    protected static function upperCamelCase($string){
-        $string = str_replace('-', ' ', $string);
-        $string = ucwords($string);
-        $string = str_replace(' ', '', $string);
-        return $string;
+
+    // CamelCase
+    protected static function upperCamelCase($name){
+        return str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
     }
 
-    //camelCase
-    protected static function lowerCamelCase($string){
-        return lcfirst(self::upperCamelCase($string));
+    // camelCase
+    protected static function lowerCamelCase($name){
+        return lcfirst(self::upperCamelCase($name));
     }
 
     protected static function removeQueryString($url){
