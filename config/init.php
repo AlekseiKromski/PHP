@@ -17,7 +17,7 @@ define('CACHE' , ROOT . '/tmp/cache');
 //Путь к папке конфига
 define('CONF' , ROOT . '/config');
 //Хранение расоположения шаблона сайта по умолчанию
-define('LAYOUT' , 'default');
+define('LAYOUT' , 'whatches');
 define('ERRORS_STYLES', ROOT . '/public/Errors/404/css');
 
 //http://php/public/index.php
