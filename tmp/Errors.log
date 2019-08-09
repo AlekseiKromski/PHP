@@ -258,3 +258,17 @@
 ------------------------
 [2019-08-09 12:22:35] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 45 
 ------------------------
+[2019-08-09 12:58:09] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-09 12:58:10] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-09 12:58:11] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-09 12:58:11] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 45 
+------------------------
+[2019-08-09 12:58:55] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-09 12:58:56] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-09 12:58:56] Текст ошибки: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'LIMIT3' in 'where clause' | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
