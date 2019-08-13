@@ -398,3 +398,17 @@
 ------------------------
 [2019-08-13 00:55:41] Текст ошибки: Контроллер app\controllers\CartController не найден | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 42 
 ------------------------
+[2019-08-13 10:51:24] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 45 
+------------------------
+[2019-08-13 11:09:25] Текст ошибки: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php.cyrrency' doesn't exist | Файл ошибки: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка ошибки: 194 
+------------------------
+[2019-08-13 11:13:45] Текст ошибки: Too few arguments to function php\Registry::getProperty(), 0 passed in C:\OSPanel\domains\PHP\app\controllers\AppController.php on line 20 and exactly 1 expected | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Registry.php | Строка ошибки: 29 
+------------------------
+[2019-08-13 11:13:46] Текст ошибки: Too few arguments to function php\Registry::getProperty(), 0 passed in C:\OSPanel\domains\PHP\app\controllers\AppController.php on line 20 and exactly 1 expected | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Registry.php | Строка ошибки: 29 
+------------------------
+[2019-08-13 11:32:51] Текст ошибки: Call to undefined method app\widgets\currency\Currency::getCurrencies() | Файл ошибки: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка ошибки: 20 
+------------------------
+[2019-08-13 11:32:52] Текст ошибки: Call to undefined method app\widgets\currency\Currency::getCurrencies() | Файл ошибки: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка ошибки: 20 
+------------------------
+[2019-08-13 11:35:34] Текст ошибки: Страница не найдена | Файл ошибки: C:\OSPanel\domains\PHP\vendor\php\core\Router.php | Строка ошибки: 45 
+------------------------
