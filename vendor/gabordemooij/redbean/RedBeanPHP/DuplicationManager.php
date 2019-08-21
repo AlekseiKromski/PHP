@@ -265,7 +265,7 @@ class DuplicationManager
 	 *
 	 * @return array
 	 */
-	public function camelfy( $array, $dolphinMode = FALSE ) {
+	public function camelfy( $array, $dolphinMode = false ) {
 		$newArray = array();
 		foreach( $array as $key => $element ) {
 			$newKey = preg_replace_callback( '/_(\w)/', function( &$matches ){
@@ -444,16 +444,22 @@ class DuplicationManager
 	public function exportAll( $beans, $parents = FALSE, $filters = array(), $caseStyle = 'snake')
 	{
 		$array = array();
+
 		if ( !is_array( $beans ) ) {
 			$beans = array( $beans );
 		}
+
 		foreach ( $beans as $bean ) {
 			$this->setFilters( $filters );
+
 			$duplicate = $this->dup( $bean, array(), TRUE );
+
 			$array[]   = $duplicate->export( FALSE, $parents, FALSE, $filters );
 		}
+
 		if ( $caseStyle === 'camel' ) $array = $this->camelfy( $array );
-		if ( $caseStyle === 'dolphin' ) $array = $this->camelfy( $array, TRUE );
+		if ( $caseStyle === 'dolphin' ) $array = $this->camelfy( $array, true );
+
 		return $array;
 	}
 }

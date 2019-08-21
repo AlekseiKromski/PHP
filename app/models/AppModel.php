@@ -1,14 +1,10 @@
 <?php
 
-
 namespace app\models;
 
+use ishop\base\Model;
 
-use php\base\Models;
-
-class AppModel extends Models
-{
-
+class AppModel extends Model{
 
 
 

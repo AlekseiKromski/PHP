@@ -109,17 +109,6 @@ class TagManager
 	 * Tag list can be either an array with tag names or a comma separated list
 	 * of tag names.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * R::hasTag( $blog, 'horror,movie', TRUE );
-	 * </code>
-	 *
-	 * The example above returns TRUE if the $blog bean has been tagged
-	 * as BOTH horror and movie. If the post has only been tagged as 'movie'
-	 * or 'horror' this operation will return FALSE because the third parameter
-	 * has been set to TRUE.
-	 *
 	 * @param  OODBBean     $bean bean to check for tags
 	 * @param  array|string $tags list of tags
 	 * @param  boolean      $all  whether they must all match or just some
@@ -141,23 +130,14 @@ class TagManager
 	}
 
 	/**
-	 * Removes all specified tags from the bean. The tags specified in
+	 * Removes all sepcified tags from the bean. The tags specified in
 	 * the second parameter will no longer be associated with the bean.
 	 *
 	 * Tag list can be either an array with tag names or a comma separated list
 	 * of tag names.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * R::untag( $blog, 'smart,interesting' );
-	 * </code>
-	 *
-	 * In the example above, the $blog bean will no longer
-	 * be associated with the tags 'smart' and 'interesting'.
-	 *
-	 * @param  OODBBean $bean    tagged bean
-	 * @param  array    $tagList list of tags (names)
+	 * @param  OODBBean     $bean    tagged bean
+	 * @param  array|string $tagList list of tags (names)
 	 *
 	 * @return void
 	 */
@@ -173,7 +153,6 @@ class TagManager
 	}
 
 	/**
-	 * Part of RedBeanPHP Tagging API.
 	 * Tags a bean or returns tags associated with a bean.
 	 * If $tagList is NULL or omitted this method will return a
 	 * comma separated list of tags associated with the bean provided.
@@ -181,21 +160,13 @@ class TagManager
 	 * be associated with the bean.
 	 * You may also pass an array instead of a string.
 	 *
-	 * Usage:
+	 * Tag list can be either an array with tag names or a comma separated list
+	 * of tag names.
 	 *
-	 * <code>
-	 * R::tag( $meal, "TexMex,Mexican" );
-	 * $tags = R::tag( $meal );
-	 * </code>
+	 * @param OODBBean     $bean    bean to be tagged
+	 * @param array|string $tagList a list of tags
 	 *
-	 * The first line in the example above will tag the $meal
-	 * as 'TexMex' and 'Mexican Cuisine'. The second line will
-	 * retrieve all tags attached to the meal object.
-	 *
-	 * @param OODBBean $bean    bean to tag
-	 * @param mixed    $tagList tags to attach to the specified bean
-	 *
-	 * @return string
+	 * @return array
 	 */
 	public function tag( OODBBean $bean, $tagList = NULL )
 	{
@@ -218,23 +189,16 @@ class TagManager
 	}
 
 	/**
-	 * Part of RedBeanPHP Tagging API.
 	 * Adds tags to a bean.
 	 * If $tagList is a comma separated list of tags all tags will
 	 * be associated with the bean.
 	 * You may also pass an array instead of a string.
 	 *
-	 * Usage:
+	 * Tag list can be either an array with tag names or a comma separated list
+	 * of tag names.
 	 *
-	 * <code>
-	 * R::addTags( $blog, ["halloween"] );
-	 * </code>
-	 *
-	 * The example adds the tag 'halloween' to the $blog
-	 * bean.
-	 *
-	 * @param OODBBean $bean    bean to tag
-	 * @param array    $tagList list of tags to add to bean
+	 * @param OODBBean     $bean    bean to add tags to
+	 * @param array|string $tagList list of tags to add to bean
 	 *
 	 * @return void
 	 */
@@ -265,21 +229,6 @@ class TagManager
 	 * Tag list can be either an array with tag names or a comma separated list
 	 * of tag names.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $watchList = R::tagged(
-	 *   'movie',
-	 *   'horror,gothic',
-	 *   ' ORDER BY movie.title DESC LIMIT ?',
-	 *   [ 10 ]
-	 * );
-	 * </code>
-	 *
-	 * The example uses R::tagged() to find all movies that have been
-	 * tagged as 'horror' or 'gothic', order them by title and limit
-	 * the number of movies to be returned to 10.
-	 *
 	 * @param string       $beanType type of bean you are looking for
 	 * @param array|string $tagList  list of tags to match
 	 * @param string       $sql      additional SQL (use only for pagination)
@@ -297,30 +246,12 @@ class TagManager
 
 	/**
 	 * Returns all beans that have been tagged with ALL of the tags given.
-	 * This method works the same as R::tagged() except that this method only returns
-	 * beans that have been tagged with all the specified labels.
 	 *
 	 * Tag list can be either an array with tag names or a comma separated list
 	 * of tag names.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $watchList = R::taggedAll(
-	 *    'movie',
-	 *    [ 'gothic', 'short' ],
-	 *    ' ORDER BY movie.id DESC LIMIT ? ',
-	 *    [ 4 ]
-	 * );
-	 * </code>
-	 *
-	 * The example above returns at most 4 movies (due to the LIMIT clause in the SQL
-	 * Query Snippet) that have been tagged as BOTH 'short' AND 'gothic'.
-	 *
 	 * @param string       $beanType type of bean you are looking for
 	 * @param array|string $tagList  list of tags to match
-	 * @param string       $sql      additional sql snippet
-	 * @param array        $bindings bindings
 	 *
 	 * @return array
 	 */
@@ -330,41 +261,5 @@ class TagManager
 		$records    = $this->toolbox->getWriter()->queryTagged( $beanType, $tags, TRUE, $sql, $bindings );
 
 		return $this->redbean->convertToBeans( $beanType, $records );
-	}
-
-	/**
-	 * Like taggedAll() but only counts.
-	 *
-	 * @see taggedAll
-	 *
-	 * @param string       $beanType type of bean you are looking for
-	 * @param array|string $tagList  list of tags to match
-	 * @param string       $sql      additional sql snippet
-	 * @param array        $bindings bindings
-	 *
-	 * @return integer
-	 */
-	public function countTaggedAll( $beanType, $tagList, $sql = '', $bindings = array() )
-	{
-		$tags  = $this->extractTagsIfNeeded( $tagList );
-		return $this->toolbox->getWriter()->queryCountTagged( $beanType, $tags, TRUE, $sql, $bindings );
-	}
-
-	/**
-	 * Like tagged() but only counts.
-	 *
-	 * @see tagged
-	 *
-	 * @param string       $beanType type of bean you are looking for
-	 * @param array|string $tagList  list of tags to match
-	 * @param string       $sql      additional sql snippet
-	 * @param array        $bindings bindings
-	 *
-	 * @return integer
-	 */
-	public function countTagged( $beanType, $tagList, $sql = '', $bindings = array() )
-	{
-		$tags  = $this->extractTagsIfNeeded( $tagList );
-		return $this->toolbox->getWriter()->queryCountTagged( $beanType, $tags, FALSE, $sql, $bindings );
 	}
 }

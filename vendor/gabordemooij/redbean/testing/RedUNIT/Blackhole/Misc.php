@@ -9,10 +9,7 @@ use RedBeanPHP\Driver\RPDO as RPDO;
 use RedBeanPHP\Logger\RDefault as RDefault;
 use RedBeanPHP\RedException as RedException;
 use RedBeanPHP\BeanHelper\SimpleFacadeBeanHelper as SimpleFacadeBeanHelper;
-use RedBeanPHP\QueryWriter;
 use RedBeanPHP\QueryWriter\AQueryWriter as AQueryWriter;
-use RedBeanPHP\QueryWriter\MySQL as MySQLQueryWriter;
-use RedBeanPHP\QueryWriter\PostgreSQL as PostgresQueryWriter;
 
 /**
  * Misc
@@ -39,110 +36,6 @@ class Misc extends Blackhole
 	public function getTargetDrivers()
 	{
 		return array( 'sqlite' );
-	}
-
-	/**
-	 * Test whether we get the correct exception if we try to
-	 * add a database we don't have a compatible QueryWriter for.
-	 *
-	 * @return void
-	 */
-	public function testUnsupportedDatabaseWriter()
-	{
-		$exception = NULL;
-		try {
-			R::addDatabase( 'x', 'blackhole:host=localhost;dbname=db', 'username', 'password' );
-		} catch( \Exception $e ) {
-			$exception = $e;
-		}
-		asrt( ( $exception instanceof RedException ), TRUE );
-		asrt( $exception->getMessage(), 'Unsupported database (blackhole).' );
-		$rpdo = new \TestRPO( new \MockPDO );
-		asrt( @$rpdo->testCap( 'utf8mb4' ), FALSE );
-	}
-
-
-
-	/**
-	 * Misc tests.
-	 * 'Tests' almost impossible lines to test.
-	 * Not sure if very useful.
-	 *
-	 * @return void
-	 */
-	public function testMisc()
-	{
-		$null = R::getDatabaseAdapter()->getDatabase()->stringifyFetches( TRUE );
-		asrt( NULL, $null );
-		R::getDatabaseAdapter()->getDatabase()->stringifyFetches( FALSE );
-	}
-
-	/**
-	 * Test whether we can toggle enforcement of the RedBeanPHP
-	 * naming policy.
-	 *
-	 * @return void
-	 */
-	public function testEnforceNamingPolicy()
-	{
-		\RedBeanPHP\Util\DispenseHelper::setEnforceNamingPolicy( FALSE );
-		R::dispense('a_b');
-		pass();
-		\RedBeanPHP\Util\DispenseHelper::setEnforceNamingPolicy( TRUE );
-		try {
-			R::dispense('a_b');
-			fail();
-		} catch( \Exception $e ) {
-			pass();
-		}
-	}
-
-	/**
-	 * Test R::csv()
-	 *
-	 * @return void
-	 */
-	public function testCSV()
-	{
-		\RedBeanPHP\Util\QuickExport::operation( 'test', TRUE, TRUE );
-		R::nuke();
-		$city = R::dispense('city');
-		$city->name = 'city1';
-		$city->region = 'region1';
-		$city->population = '200k';
-		R::store($city);
-		$qe = new \RedBeanPHP\Util\QuickExport( R::getToolBox() );
-		$out = $qe->csv( 'SELECT `name`, population FROM city WHERE region = :region ',
-			array( ':region' => 'region1' ),
-			array( 'city', 'population' ),
-			'/tmp/cities.csv'
-			);
-		$out = preg_replace( '/\W/', '', $out );
-		asrt( 'PragmapublicExpires0CacheControlmustrevalidatepostcheck0precheck0CacheControlprivateContentTypetextcsvContentDispositionattachmentfilenamecitiescsvContentTransferEncodingbinarycitypopulationcity1200k', $out );
-	}
-
-	/**
-	 * Test whether sqlStateIn can detect lock timeouts.
-	 *
-	 * @return void
-	 */
-	public function testLockTimeoutDetection()
-	{
-		$queryWriter = new MySQLQueryWriter( R::getDatabaseAdapter() );
-		asrt($queryWriter->sqlStateIn('HY000', array(QueryWriter::C_SQLSTATE_LOCK_TIMEOUT), array(0,'1205')), TRUE);
-		$queryWriter = new PostgresQueryWriter( R::getDatabaseAdapter() );
-		asrt($queryWriter->sqlStateIn('55P03', array(QueryWriter::C_SQLSTATE_LOCK_TIMEOUT), array(0,'')), TRUE);
-	}
-
-	/**
-	 * Tests setOption
-	 *
-	 * @return void
-	 */
-	public function testSetOptionFalse()
-	{
-		$false = R::getDatabaseAdapter()->setOption( 'unknown', 1 );
-		asrt( $false, FALSE );
 	}
 
 	/**
@@ -290,7 +183,7 @@ class Misc extends Blackhole
 	{
 		testpack( 'Test debug mode with custom logger' );
 		$pdoDriver = new RPDO( R::getDatabaseAdapter()->getDatabase()->getPDO() );
-		$customLogger = new \CustomLogger;
+		$customLogger = new CustomLogger;
 		$pdoDriver->setDebugMode( TRUE, $customLogger );
 		$pdoDriver->Execute( 'SELECT 123' );
 		asrt( count( $customLogger->getLogMessage() ), 1 );
@@ -602,3 +495,22 @@ class Misc extends Blackhole
 	}
 }
 
+/**
+ * Custom Logger class.
+ * For testing purposes.
+ */
+class CustomLogger extends RDefault
+{
+
+	private $log;
+
+	public function getLogMessage()
+	{
+		return $this->log;
+	}
+
+	public function log()
+	{
+		$this->log = func_get_args();
+	}
+}

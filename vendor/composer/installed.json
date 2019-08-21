@@ -6,20 +6,20 @@
         "source": {
             "type": "git",
             "url": "https://github.com/gabordemooij/redbean.git",
-            "reference": "3ddbc6b5684684376b1f67a8c6bb9c93cf6cf476"
+            "reference": "935cc77ed8bd0f6589b0e296d644ef50c384cf68"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/3ddbc6b5684684376b1f67a8c6bb9c93cf6cf476",
-            "reference": "3ddbc6b5684684376b1f67a8c6bb9c93cf6cf476",
+            "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/935cc77ed8bd0f6589b0e296d644ef50c384cf68",
+            "reference": "935cc77ed8bd0f6589b0e296d644ef50c384cf68",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.4"
         },
-        "time": "2019-08-04T11:40:57+00:00",
+        "time": "2017-06-20T10:05:43+00:00",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
                 "RedBeanPHP\\": "RedBeanPHP"
@@ -27,17 +27,17 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD-3-Clause"
+            "New BSD and GPLv2"
         ],
         "authors": [
             {
                 "name": "Gabor de Mooij",
                 "email": "gabor@redbeanphp.com",
-                "homepage": "https://redbeanphp.com"
+                "homepage": "http://redbeanphp.com"
             }
         ],
         "description": "RedBeanPHP ORM",
-        "homepage": "https://redbeanphp.com/",
+        "homepage": "http://redbeanphp.com/",
         "keywords": [
             "orm"
         ]

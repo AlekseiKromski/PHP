@@ -33,7 +33,7 @@ class Export extends Blackhole
 	{
 		testpack( 'Test exportAll' );
 		$redbean = R::getRedBean();
-		$bean = R::dispense('bean');
+		$bean = new OODBBean;
 		$bean->import( array( 'a' => 1, 'b' => 2 ) );
 		$bean->setMeta( 'justametaproperty', 'hellothere' );
 		$arr = $bean->export();

@@ -31,14 +31,6 @@ interface Cursor
 	public function getNextItem();
 
 	/**
-	 * Resets the cursor by closing it and re-executing the statement.
-	 * This reloads fresh data from the database for the whole collection.
-	 *
-	 * @return void
-	 */
-	public function reset();
-
-	/**
 	 * Closes the database cursor.
 	 * Some databases require a cursor to be closed before executing
 	 * another statement/opening a new cursor.

@@ -142,8 +142,8 @@ class Foreignkeys extends Mysql
 
 		$bean3 = R::getRedBean()->dispense( 'invoice_project' );
 
-		$bean3->project_id = FALSE;
-		$bean3->invoice_id = TRUE;
+		$bean3->project_id = false;
+		$bean3->invoice_id = true;
 
 		R::store( $bean3 );
 

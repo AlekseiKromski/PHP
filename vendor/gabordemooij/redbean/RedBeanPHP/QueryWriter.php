@@ -41,7 +41,6 @@ interface QueryWriter
 	const C_SQLSTATE_NO_SUCH_TABLE                  = 1;
 	const C_SQLSTATE_NO_SUCH_COLUMN                 = 2;
 	const C_SQLSTATE_INTEGRITY_CONSTRAINT_VIOLATION = 3;
-	const C_SQLSTATE_LOCK_TIMEOUT                   = 4;
 
 	/**
 	 * Define data type regions
@@ -73,7 +72,7 @@ interface QueryWriter
 	 *
 	 * @param string $type       source type
 	 * @param string $targetType target type (type to join)
-	 * @param string $joinType   type of join (possible: 'LEFT', 'RIGHT' or 'INNER').
+	 * @param string $leftRight  type of join (possible: 'LEFT', 'RIGHT' or 'INNER').
 	 *
 	 * @return string $joinSQLSnippet
 	 */
@@ -159,20 +158,9 @@ interface QueryWriter
 	/**
 	 * Returns the Column Type Code (integer) that corresponds
 	 * to the given value type. This method is used to determine the minimum
-	 * column type required to represent the given value. There are two modes of
-	 * operation: with or without special types. Scanning without special types
-	 * requires the second parameter to be set to FALSE. This is useful when the
-	 * column has already been created and prevents it from being modified to
-	 * an incompatible type leading to data loss. Special types will be taken
-	 * into account when a column does not exist yet (parameter is then set to TRUE).
+	 * column type required to represent the given value.
 	 *
-	 * Special column types are determines by the AQueryWriter constant
-	 * C_DATA_TYPE_ONLY_IF_NOT_EXISTS (usually 80). Another 'very special' type is type
-	 * C_DATA_TYPE_MANUAL (usually 99) which represents a user specified type. Although
-	 * no special treatment has been associated with the latter for now.
-	 *
-	 * @param string  $value                   value
-	 * @param boolean $alsoScanSpecialForTypes take special types into account
+	 * @param string $value value
 	 *
 	 * @return integer
 	 */
@@ -223,7 +211,7 @@ interface QueryWriter
 	 *
 	 * @param string $type       name of the table you want to query
 	 * @param array  $conditions criteria ( $column => array( $values ) )
-	 * @param string $addSql     additional SQL snippet
+	 * @param string $addSQL     additional SQL snippet
 	 * @param array  $bindings   bindings for SQL snippet
 	 *
 	 * @return array
@@ -314,35 +302,6 @@ interface QueryWriter
 	public function queryTagged( $type, $tagList, $all = FALSE, $addSql = '', $bindings = array() );
 
 	/**
-	 * Like queryTagged but only counts.
-	 *
-	 * @param string  $type     the bean type you want to query
-	 * @param array   $tagList  an array of strings, each string containing a tag title
-	 * @param boolean $all      if TRUE only return records that have been associated with ALL the tags in the list
-	 * @param string  $addSql   addition SQL snippet, for pagination
-	 * @param array   $bindings parameter bindings for additional SQL snippet
-	 *
-	 * @return integer
-	 */
-	public function queryCountTagged( $type, $tagList, $all = FALSE, $addSql = '', $bindings = array() );
-
-	/**
-	 * Returns all parent rows or child rows of a specified row.
-	 * Given a type specifier and a primary key id, this method returns either all child rows
-	 * as defined by having <type>_id = id or all parent rows as defined per id = <type>_id
-	 * taking into account an optional SQL snippet along with parameters.
-	 *
-	 * @param string  $type     the bean type you want to query rows for
-	 * @param integer $id       id of the reference row
-	 * @param boolean $up       TRUE to query parent rows, FALSE to query child rows
-	 * @param string  $addSql   optional SQL snippet to embed in the query
-	 * @param array   $bindings parameter bindings for additional SQL snippet
-	 *
-	 * @return array
-	 */
-	public function queryRecursiveCommonTableExpression( $type, $id, $up = TRUE, $addSql = NULL, $bindings = array() );
-
-	/**
 	 * This method should update (or insert a record), it takes
 	 * a table name, a list of update values ( $field => $value ) and an
 	 * primary key ID (optional). If no primary key ID is provided, an
@@ -364,7 +323,7 @@ interface QueryWriter
 	 *
 	 * @param string $type       name of the table you want to query
 	 * @param array  $conditions criteria ( $column => array( $values ) )
-	 * @param string $addSql     additional SQL
+	 * @param string $sql        additional SQL
 	 * @param array  $bindings   bindings
 	 *
 	 * @return void
@@ -407,13 +366,10 @@ interface QueryWriter
 	 *
 	 * @param string $state SQL state to consider
 	 * @param array  $list  list of standardized SQL state constants to check against
-	 * @param array  $extraDriverDetails Some databases communicate state information in a driver-specific format
-	 *                                   rather than through the main sqlState code. For those databases, this extra
-	 *                                   information can be used to determine the standardized state
 	 *
 	 * @return boolean
 	 */
-	public function sqlStateIn( $state, $list, $extraDriverDetails = array() );
+	public function sqlStateIn( $state, $list );
 
 	/**
 	 * This method will remove all beans of a certain type.
@@ -443,7 +399,7 @@ interface QueryWriter
 	 *
 	 * @return void
 	 */
-	public function addFK( $type, $targetType, $property, $targetProperty, $isDep = FALSE );
+	public function addFK( $type, $targetType, $property, $targetProperty, $isDep = false );
 
 	/**
 	 * This method will add an index to a type and field with name

@@ -25,40 +25,18 @@ class Debug extends RDefault implements Logger
 	/**
 	 * @var integer
 	 */
-	protected $strLen = 40;
-
-	/**
-	 * @var boolean
-	 */
-	protected static $noCLI = FALSE;
-
-	/**
-	 * Toggles CLI override. By default debugging functions will
-	 * output differently based on PHP_SAPI values. This function
-	 * allows you to override the PHP_SAPI setting. If you set
-	 * this to TRUE, CLI output will be supressed in favour of
-	 * HTML output. So, to get HTML on the command line use
-	 * setOverrideCLIOutput( TRUE ).
-	 *
-	 * @param boolean $yesNo CLI-override setting flag
-	 *
-	 * @return void
-	 */
-	public static function setOverrideCLIOutput( $yesNo )
-	{
-		self::$noCLI = $yesNo;
-	}
+	private $strLen = 40;
 
 	/**
 	 * Writes a query for logging with all bindings / params filled
 	 * in.
 	 *
-	 * @param string $newSql      the query
-	 * @param array  $newBindings the bindings to process (key-value pairs)
+	 * @param string $newSql   the query
+	 * @param array  $bindings the bindings to process (key-value pairs)
 	 *
 	 * @return string
 	 */
-	protected function writeQuery( $newSql, $newBindings )
+	private function writeQuery( $newSql, $newBindings )
 	{
 		//avoid str_replace collisions: slot1 and slot10 (issue 407).
 		uksort( $newBindings, function( $a, $b ) {
@@ -121,7 +99,7 @@ class Debug extends RDefault implements Logger
 			|| strpos( $str, 'DROP' ) === 0) {
 				$highlight = TRUE;
 			}
-			if (PHP_SAPI === 'cli' && !self::$noCLI) {
+			if (PHP_SAPI === 'cli') {
 				if ($highlight) echo "\e[91m";
 				echo $str, PHP_EOL;
 				echo "\e[39m";
@@ -153,7 +131,7 @@ class Debug extends RDefault implements Logger
 			$slot  = ':slot'.$i;
 			$begin = substr( $newSql, 0, $pos );
 			$end   = substr( $newSql, $pos+1 );
-			if (PHP_SAPI === 'cli' && !self::$noCLI) {
+			if (PHP_SAPI === 'cli') {
 				$newSql = "{$begin}\e[32m{$slot}\e[39m{$end}";
 			} else {
 				$newSql = "{$begin}<b style=\"color:green\">$slot</b>{$end}";

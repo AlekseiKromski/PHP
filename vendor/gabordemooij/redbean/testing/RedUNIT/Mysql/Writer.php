@@ -29,221 +29,6 @@ use RedBeanPHP\RedException as RedException;
  */
 class Writer extends \RedUNIT\Mysql
 {
-	/**
-	 * Test whether optimizations do not have effect on Writer query outcomes.
-	 *
-	 * @return void
-	 */
-	public function testWriterSpeedUp()
-	{
-		R::nuke();
-		$id = R::store( R::dispense( 'book' ) );
-		$writer = R::getWriter();
-		$count1 = $writer->queryRecordCount( 'book', array( 'id' => $id ), ' id = :id ', array( ':id' => $id ) );
-		$count2 = $writer->queryRecordCount( 'book', array( ), ' id = :id ', array( ':id' => $id ) );
-		$count3 = $writer->queryRecordCount( 'book', NULL, ' id = :id ', array( ':id' => $id ) );
-		$count4 = $writer->queryRecordCount( 'book', array( 'id' => $id ) );
-		asrt( $count1, $count2 );
-		asrt( $count2, $count3 );
-		asrt( $count3, $count4 );
-		R::nuke();
-		$books = R::dispenseAll( 'book*4' );
-		$ids = R::storeAll( $books[0] );
-		$writer->deleteRecord( 'book', array( 'id' => $ids[0] ) );
-		$writer->deleteRecord( 'book', array( 'id' => $ids[1] ), ' id = :id ', array( ':id' => $ids[1] ) );
-		$writer->deleteRecord( 'book', NULL, ' id = :id ', array( ':id' => $ids[2] ) );
-		$writer->deleteRecord( 'book', array(), ' id = :id ', array( ':id' => $ids[3] ) );
-		asrt( R::count( 'book' ), 0 );
-		R::nuke();
-		$id = R::store( R::dispense( 'book' ) );
-		$record = $writer->queryRecord( 'book', array( 'id' => $id ) );
-		asrt( is_array( $record ), TRUE );
-		asrt( is_array( $record[0] ), TRUE );
-		asrt( isset( $record[0]['id'] ), TRUE );
-		asrt( (int) $record[0]['id'], $id );
-		$record = $writer->queryRecord( 'book', array( 'id' => $id ), ' id = :id ', array( ':id' => $id ) );
-		asrt( is_array( $record ), TRUE );
-		asrt( is_array( $record[0] ), TRUE );
-		asrt( isset( $record[0]['id'] ), TRUE );
-		asrt( (int) $record[0]['id'], $id );
-		$record = $writer->queryRecord( 'book', NULL, ' id = :id ', array( ':id' => $id ) );
-		asrt( is_array( $record ), TRUE );
-		asrt( is_array( $record[0] ), TRUE );
-		asrt( isset( $record[0]['id'] ), TRUE );
-		asrt( (int) $record[0]['id'], $id );
-		$record = $writer->queryRecord( 'book', array(), ' id = :id ', array( ':id' => $id ) );
-		asrt( is_array( $record ), TRUE );
-		asrt( is_array( $record[0] ), TRUE );
-		asrt( isset( $record[0]['id'] ), TRUE );
-		asrt( (int) $record[0]['id'], $id );
-	}
-
-	/**
-	 * Tests wheter we can write a deletion query
-	 * for MySQL using NO conditions but only an
-	 * additional SQL snippet.
-	 *
-	 * @return void
-	 */
-	public function testWriteDeleteQuery()
-	{
-		$queryWriter = R::getWriter();
-		asrt( ( $queryWriter instanceof MySQL ), TRUE );
-		R::nuke();
-		$bean = R::dispense( 'bean' );
-		$bean->name = 'a';
-		$id = R::store( $bean );
-		asrt( R::count( 'bean' ), 1 );
-		$queryWriter->deleteRecord( 'bean', array(), $addSql = ' id = :id ', $bindings = array( ':id' => $id ) );
-		asrt( R::count( 'bean' ), 0 );
-	}
-
-	/**
-	 * Tests wheter we can write a counting query
-	 * for MySQL using conditions and an additional SQL snippet.
-	 *
-	 * @return void
-	 */
-	public function testWriteCountQuery()
-	{
-		$queryWriter = R::getWriter();
-		asrt( ( $queryWriter instanceof MySQL ), TRUE );
-		R::nuke();
-		$bean = R::dispense( 'bean' );
-		$bean->name = 'a';
-		R::store( $bean );
-		$bean = R::dispense( 'bean' );
-		$bean->name = 'b';
-		R::store( $bean );
-		$bean = R::dispense( 'bean' );
-		$bean->name = 'b';
-		R::store( $bean );
-		$count = $queryWriter->queryRecordCount( 'bean', array( 'name' => 'b' ), $addSql = ' id > :id ', $bindings = array( ':id' => 0 ) );
-		asrt( $count, 2 );
-	}
-
-	/**
-	 * Tests whether we can write a MySQL join and
-	 * whether the correct exception is thrown in case
-	 * of an invalid join.
-	 *
-	 * @return void
-	 */
-	public function testWriteJoinSnippets()
-	{
-		$queryWriter = R::getWriter();
-		asrt( ( $queryWriter instanceof MySQL ), TRUE );
-		$snippet = $queryWriter->writeJoin( 'book', 'page' ); //default must be LEFT
-		asrt( is_string( $snippet ), TRUE );
-		asrt( ( strlen( $snippet ) > 0 ), TRUE );
-		asrt( ' LEFT JOIN `page` ON `page`.id = `book`.page_id ', $snippet );
-		$snippet = $queryWriter->writeJoin( 'book', 'page', 'LEFT' );
-		asrt( is_string( $snippet ), TRUE );
-		asrt( ( strlen( $snippet ) > 0 ), TRUE );
-		asrt( ' LEFT JOIN `page` ON `page`.id = `book`.page_id ', $snippet );
-		$snippet = $queryWriter->writeJoin( 'book', 'page', 'RIGHT' );
-		asrt( is_string( $snippet ), TRUE );
-		asrt( ( strlen( $snippet ) > 0 ), TRUE );
-		asrt( ' RIGHT JOIN `page` ON `page`.id = `book`.page_id ', $snippet );
-		$snippet = $queryWriter->writeJoin( 'book', 'page', 'INNER' );
-		asrt( ' INNER JOIN `page` ON `page`.id = `book`.page_id ', $snippet );
-		$exception = NULL;
-		try {
-			$snippet = $queryWriter->writeJoin( 'book', 'page', 'MIDDLE' );
-		}
-		catch(\Exception $e) {
-			$exception = $e;
-		}
-		asrt( ( $exception instanceof RedException ), TRUE );
-		$errorMessage = $exception->getMessage();
-		asrt( is_string( $errorMessage ), TRUE );
-		asrt( ( strlen( $errorMessage ) > 0 ), TRUE );
-		asrt( $errorMessage, 'Invalid JOIN.' );
-	}
-
-	/**
-	 * Test whether we can store JSON as a JSON column
-	 * and whether this plays well with the other data types.
-	 */
-	public function testSetGetJSON()
-	{
-		/* a stub test in case full test cannot be performed, see below */
-		R::useJSONFeatures( TRUE );
-		asrt( R::getWriter()->scanType( '[1,2,3]', TRUE ), MySQL::C_DATATYPE_SPECIAL_JSON );
-		R::useJSONFeatures( FALSE );
-
-		global $travis;
-		if ($travis) return;
-
-		/* does not work on MariaDB */
-		$version = strtolower( R::getCell('select version()') );
-		if ( strpos( $version, 'mariadb' ) !== FALSE ) return;
-
-		// Check if database platform is MariaDB < 10.2
-		$selectVersion = R::getDatabaseAdapter()->getCol( 'SELECT VERSION()' );
-		list ( $version, $dbPlatform ) = explode( '-', reset ( $selectVersion ) );
-		list( $versionMajor, $versionMinor, $versionPatch ) = explode( '.', $version );
-		if ( $dbPlatform == "MariaDB" && $versionMajor <= 10 && $versionMinor < 2 ) {
-			// No support for JSON columns, abort test
-			return;
-		}
-		R::nuke();
-		$bean = R::dispense('bean');
-		$message = json_encode( array( 'message' => 'hello', 'type' => 'greeting' ) );
-		$bean->data = $message;
-		R::store( $bean );
-		$columns = R::inspect('bean');
-		asrt( array_key_exists( 'data', $columns ), TRUE );
-		asrt( ( $columns['data'] !== 'json' ), TRUE );
-		R::useJSONFeatures( TRUE );
-		R::nuke();
-		$bean = R::dispense('bean');
-		$message = array( 'message' => 'hello', 'type' => 'greeting' );
-		$bean->data = $message;
-		R::store( $bean );
-		$columns = R::inspect('bean');
-		asrt( array_key_exists( 'data', $columns ), TRUE );
-		asrt( $columns['data'], 'json' );
-		$bean = $bean->fresh();
-		$message = json_decode( $bean->data, TRUE );
-		asrt( $message['message'], 'hello' );
-		asrt( $message['type'], 'greeting' );
-		$message['message'] = 'hi';
-		$bean->data = $message;
-		R::store( $bean );
-		pass();
-		$bean = R::findOne( 'bean' );
-		$message = json_decode( $bean->data );
-		asrt( $message->message, 'hi' );
-		$book = R::dispense( 'book' );
-		$book->page = 'lorem ipsum';
-		R::store( $book );
-		$book = $book->fresh();
-		asrt( $book->page, 'lorem ipsum' );
-		$book2 = R::dispense( 'book' );
-		$book2->page = array( 'chapter' => '1' );
-		R::store( $book2 );
-		pass(); //should not try to modify column and trigger exception
-		$book = $book->fresh();
-		asrt( $book->page, 'lorem ipsum' );
-		$columns = R::inspect('book');
-		asrt( ( $columns['page'] !== 'json' ), TRUE );
-		$building = R::dispense( 'building' );
-		$building->year = 'MLXXVIII';
-		R::store( $building );
-		$shop = R::dispense( 'building' );
-		$shop->year = '2010-01-01';
-		R::store( $shop );
-		$building = R::load( 'building', $building->id );
-		asrt( $building->year, 'MLXXVIII' );
-		$columns = R::inspect( 'building' );
-		asrt( strpos( strtolower( $columns['year'] ), 'date' ), FALSE );
-		$shop->anno = '2010-01-01';
-		R::store( $shop );
-		$columns = R::inspect( 'building' );
-		asrt( $columns['anno'], 'date' );
-		R::useJSONFeatures( FALSE );
-	}
 
 	/**
 	 * Test Facade bind function method.
@@ -255,14 +40,14 @@ class Writer extends \RedUNIT\Mysql
 		R::bindFunc( 'read', 'location.point', 'asText' );
 		R::bindFunc( 'write', 'location.point', 'GeomFromText' );
 		R::store(R::dispense('location'));
-		R::freeze( TRUE );
+		R::freeze( true );
 		try {
 			R::find('location');
 			fail();
 		} catch( SQL $exception ) {
 			pass();
 		}
-		R::freeze( FALSE );
+		R::freeze( false );
 		try {
 			R::find('location');
 			pass();
@@ -878,27 +663,5 @@ class Writer extends \RedUNIT\Mysql
 		R::store( $place );
 
 		asrt( R::getCell( 'SELECT AsText(location) FROM place LIMIT 1' ), $data );
-	}
-
-	/**
-	 * Can we manually add a MySQL time column?
-	 *
-	 * @return void
-	 */
-	public function testTime()
-	{
-		R::nuke();
-		$clock = R::dispense('clock');
-		$clock->time = '10:00:00';
-		$clock->setMeta('cast.time', 'time');
-		R::store( $clock );
-		$columns = R::inspect('clock');
-		asrt( $columns['time'], 'time' );
-		$clock = R::findOne('clock');
-		$clock->time = '12';
-		R::store($clock);
-		$clock = R::findOne('clock');
-		$time = $clock->time;
-		asrt( ( strpos( $time, ':' ) > 0 ), TRUE );
 	}
 }

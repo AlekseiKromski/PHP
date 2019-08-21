@@ -28,36 +28,27 @@ class Debug extends Blackhole
 	 * Given a query, a set of bindings and an expected outcome,
 	 * this method tests the result of the debugger.
 	 *
-	 * @param string  $query
-	 * @param mixed   $bindings
-	 * @param string  $expected
-	 * @param integer $mode
-	 * @param string  $expected2
+	 * @param string $query
+	 * @param mixed  $bindings
+	 * @param string $expected
 	 *
 	 * @return void
 	 */
-	private function testDebug($query, $bindings = NULL, $expected, $mode = 1, $expected2 = NULL)
+	private function testDebug($query, $bindings = NULL, $expected)
 	{
 		$debugger = new Debugger;
-		$debugger->setMode( $mode  );
+		$debugger->setMode( 1 );
 		$debugger->setParamStringLength( 20 );
-		ob_start();
 		if (!is_null($bindings)) {
 			$debugger->log($query, $bindings);
 		} else {
 			$debugger->log($query);
 		}
-		$out = ob_get_contents();
-		ob_clean();
-		ob_end_flush();
 		$logs = $debugger->getLogs();
 		$log = reset($logs);
 		$log = str_replace( "\e[32m", '', $log );
 		$log = str_replace( "\e[39m", '', $log );
 		asrt($log, $expected);
-		if (!$mode) {
-			asrt($out, $expected2);
-		}
 		$debugger->clear();
 	}
 
@@ -142,11 +133,6 @@ class Debug extends Blackhole
 		'a','b','c','d','e','f','g','h','i','j','k'
 		),"'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k'");
 		$this->testDebug(':a :aaa :ab', array(':a'=>1,':aaa'=>2,':ab'=>3),'1 2 3');
-		Debugger::setOverrideCLIOutput( TRUE );
-		$this->testDebug('SELECT * FROM table', NULL, 'SELECT * FROM table', 0, 'SELECT * FROM table<br />');
-		$this->testDebug('DROP TABLE myths', NULL, 'DROP TABLE myths', 0, '<b style="color:red">DROP TABLE myths</b><br />');
-		$this->testDebug('SELECT * FROM book WHERE title = ?', array('my book'), 'SELECT * FROM book WHERE title = <b style="color:green">\'my book\'</b>');
-		Debugger::setOverrideCLIOutput( FALSE );
 	}
 
 	/**

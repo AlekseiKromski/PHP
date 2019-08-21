@@ -31,14 +31,6 @@ class NullCursor implements Cursor
 	}
 
 	/**
-	 * @see Cursor::reset
-	 */
-	public function reset()
-	{
-		return NULL;
-	}
-
-	/**
 	 * @see Cursor::close
 	 */
 	public function close()

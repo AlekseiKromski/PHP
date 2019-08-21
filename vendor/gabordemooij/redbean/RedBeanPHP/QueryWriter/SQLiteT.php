@@ -216,35 +216,6 @@ class SQLiteT extends AQueryWriter implements QueryWriter
 
 	/**
 	 * Constructor
-	 * Most of the time, you do not need to use this constructor,
-	 * since the facade takes care of constructing and wiring the
-	 * RedBeanPHP core objects. However if you would like to
-	 * assemble an OODB instance yourself, this is how it works:
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $database = new RPDO( $dsn, $user, $pass );
-	 * $adapter = new DBAdapter( $database );
-	 * $writer = new PostgresWriter( $adapter );
-	 * $oodb = new OODB( $writer, FALSE );
-	 * $bean = $oodb->dispense( 'bean' );
-	 * $bean->name = 'coffeeBean';
-	 * $id = $oodb->store( $bean );
-	 * $bean = $oodb->load( 'bean', $id );
-	 * </code>
-	 *
-	 * The example above creates the 3 RedBeanPHP core objects:
-	 * the Adapter, the Query Writer and the OODB instance and
-	 * wires them together. The example also demonstrates some of
-	 * the methods that can be used with OODB, as you see, they
-	 * closely resemble their facade counterparts.
-	 *
-	 * The wiring process: create an RPDO instance using your database
-	 * connection parameters. Create a database adapter from the RPDO
-	 * object and pass that to the constructor of the writer. Next,
-	 * create an OODB instance from the writer. Now you have an OODB
-	 * object.
 	 *
 	 * @param Adapter $adapter Database Adapter
 	 */
@@ -393,19 +364,13 @@ class SQLiteT extends AQueryWriter implements QueryWriter
 	/**
 	 * @see QueryWriter::sqlStateIn
 	 */
-	public function sqlStateIn( $state, $list, $extraDriverDetails = array() )
+	public function sqlStateIn( $state, $list )
 	{
 		$stateMap = array(
+			'HY000' => QueryWriter::C_SQLSTATE_NO_SUCH_TABLE,
 			'23000' => QueryWriter::C_SQLSTATE_INTEGRITY_CONSTRAINT_VIOLATION
 		);
-		if ( $state == 'HY000'
-		&& isset($extraDriverDetails[1])
-		&& $extraDriverDetails[1] == 1
-		&& ( in_array( QueryWriter::C_SQLSTATE_NO_SUCH_TABLE, $list )
-			|| in_array( QueryWriter::C_SQLSTATE_NO_SUCH_COLUMN, $list )
-		)) {
-			return TRUE;
-		}
+
 		return in_array( ( isset( $stateMap[$state] ) ? $stateMap[$state] : '0' ), $list );
 	}
 
@@ -454,12 +419,18 @@ class SQLiteT extends AQueryWriter implements QueryWriter
 	 */
 	public function wipeAll()
 	{
-		if (AQueryWriter::$noNuke) throw new \Exception('The nuke() command has been disabled using noNuke() or R::feature(novice/...).');
 		$this->adapter->exec( 'PRAGMA foreign_keys = 0 ' );
 
 		foreach ( $this->getTables() as $t ) {
-			try { $this->adapter->exec( "DROP TABLE IF EXISTS `$t`" ); } catch ( SQLException $e ) { ; }
-			try { $this->adapter->exec( "DROP TABLE IF EXISTS `$t`" ); } catch ( SQLException $e ) { ; }
+			try {
+				$this->adapter->exec( "DROP TABLE IF EXISTS `$t`" );
+			} catch ( SQLException $e ) {
+			}
+
+			try {
+				$this->adapter->exec( "DROP TABLE IF EXISTS `$t`" );
+			} catch ( SQLException $e ) {
+			}
 		}
 
 		$this->adapter->exec( 'PRAGMA foreign_keys = 1 ' );

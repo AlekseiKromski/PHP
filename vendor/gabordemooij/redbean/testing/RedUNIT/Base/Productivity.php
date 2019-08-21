@@ -104,19 +104,13 @@ class Productivity extends Base
 		$red->name = 'red';
 		$green->name = 'green';
 		$blue->name = 'blue';
-		$red->thevalue = 'r';
-		$green->thevalue = 'g';
-		$blue->thevalue = 'b';
+		$red->value = 'r';
+		$green->value = 'g';
+		$blue->value = 'b';
 		R::storeAll( array( $red, $green, $blue ) );
 		$look = R::getLook();
 		asrt( ( $look instanceof Look ), TRUE );
-		$str = R::getLook()->look( 'SELECT * FROM color WHERE thevalue != ? ORDER BY thevalue ASC', array( 'g' ),  array( 'thevalue', 'name' ),
-			'<option value="%s">%s</option>', 'strtoupper', "\n"
-		);
-		asrt( $str,
-		"<option value=\"B\">BLUE</option>\n<option value=\"R\">RED</option>"
-		);
-		$str = R::look( 'SELECT * FROM color WHERE thevalue != ? ORDER BY thevalue ASC', array( 'g' ),  array( 'thevalue', 'name' ),
+		$str = R::getLook()->look( 'SELECT * FROM color WHERE value != ? ORDER BY value ASC', array( 'g' ),  array( 'value', 'name' ),
 			'<option value="%s">%s</option>', 'strtoupper', "\n"
 		);
 		asrt( $str,
@@ -192,43 +186,5 @@ class Productivity extends Base
 		$diff = R::diff( null, $ad );
 		asrt( is_array( $diff ), TRUE );
 		asrt( count( $diff ), 0 );
-
-		/* demo case */
-		list($book,$pages) = R::dispenseAll('book,page*2');
-		$book->title = 'Old Book';
-		$book->price = 999;
-		$book->ownPageList = $pages;
-		$pages[0]->text = 'abc';
-		$pages[1]->text = 'def';
-		R::store($book);
-		$book->title = 'new Book';
-		$page = end($book->ownPageList);
-		$page->text = 'new';
-		$oldBook = $book->fresh();
-		$oldBook->ownPageList;
-		$diff = R::diff($oldBook, $book);
-		print_r($diff);
-	}
-
-	/**
-	 * Test misc. matchUp scenarios.
-	 *
-	 * @return void
-	 */
-	public function testMatchUpMisc()
-	{
-		R::nuke();
-		asrt( R::count( 'bean' ), 0 );
-		$found = R::matchUp( 'bean', ' id = ? ',  array(1), array(), array(
-			'notfound' => function( $bean ) {
-				$bean->status = 'not found';
-			}
-		) );
-		asrt( $found, FALSE );
-		asrt( R::count( 'bean' ), 1 );
-		$bean = R::findOne( 'bean' );
-		asrt( $bean->status, 'not found' );
-		$null = R::matchUp( 'bean', ' id = ? ', array( $bean->id ) );
-		asrt( is_null( $null ), TRUE );
 	}
 }

@@ -2,13 +2,13 @@
   "name": "gabordemooij/redbean",
   "description": "RedBeanPHP ORM",
   "keywords": ["orm"],
-  "homepage": "https://redbeanphp.com/",
-  "license": "BSD-3-Clause",
+  "homepage": "http://redbeanphp.com/",
+  "license": "New BSD and GPLv2",
   "authors": [
     {
       "name": "Gabor de Mooij",
       "email": "gabor@redbeanphp.com",
-      "homepage": "https://redbeanphp.com"
+      "homepage": "http://redbeanphp.com"
     }
   ],
   "require": {

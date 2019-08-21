@@ -1,35 +1,22 @@
 <?php
 
-// Константа нужна для класса обработчика ошибок
-define('DEBUG' , 1);
-//Корневой путь
-define('ROOT' , dirname(__DIR__));
-//Путь к папке public
-define('WWW' , ROOT . '/public');
-//Путь к папке app
-define('APP' , ROOT . '/app');
-//Путь к папке core
-define('CORE' , ROOT . '/vendor/php/core');
-//Путь к папке libs
-define('LIBS' , ROOT . '/vendor/php/core/libs');
-//Путь к папке кеша
-define('CACHE' , ROOT . '/tmp/cache');
-//Путь к папке конфига
-define('CONF' , ROOT . '/config');
-//Хранение расоположения шаблона сайта по умолчанию
-define('LAYOUT' , 'whatches');
-define('ERRORS_STYLES', ROOT . '/public/Errors/404/css');
+define("DEBUG", 1);
+define("ROOT", dirname(__DIR__));
+define("WWW", ROOT . '/public');
+define("APP", ROOT . '/app');
+define("CORE", ROOT . '/vendor/ishop/core');
+define("LIBS", ROOT . '/vendor/ishop/core/libs');
+define("CACHE", ROOT . '/tmp/cache');
+define("CONF", ROOT . '/config');
+define("LAYOUT", 'watches');
 
-//http://php/public/index.php
+// http://ishop2.loc/public/index.php
 $app_path = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}";
-//http://php/public/
-$app_path = preg_replace('#[^/]+$#','',$app_path);
-//http://php
-$app_path = str_replace('/public/','',$app_path);
+// http://ishop2.loc/public/
+$app_path = preg_replace("#[^/]+$#", '', $app_path);
+// http://ishop2.loc
+$app_path = str_replace('/public/', '', $app_path);
+define("PATH", $app_path);
+define("ADMIN", PATH . '/admin');
 
-//Константа, которая хранит путь к index файлу
-define('PATH', $app_path);
-//Путь к папке администратора
-define('ADMIN', PATH . '/admin');
-
-require_once ROOT . "/vendor/autoload.php";
+require_once ROOT . '/vendor/autoload.php';

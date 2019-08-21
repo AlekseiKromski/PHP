@@ -3,14 +3,6 @@ namespace RedUNIT\Base;
 
 use RedUNIT\Base as Base;
 use RedBeanPHP\Facade as R;
-use RedBeanPHP\Adapter\DBAdapter;
-use RedBeanPHP\QueryWriter\PostgreSQL;
-use RedBeanPHP\QueryWriter\SQLiteT;
-use RedBeanPHP\QueryWriter\MySQL;
-use RedBeanPHP\QueryWriter\CUBRID;
-use RedBeanPHP\OODB;
-use RedBeanPHP\BeanHelper;
-use RedBeanPHP\Driver\RPDO;
 
 /**
  * Bean
@@ -30,45 +22,6 @@ use RedBeanPHP\Driver\RPDO;
  */
 class Bean extends Base
 {
-	/**
-	 * Tests whether we can override the __toString() method of
-	 * a bean (for example to display binary data).
-	 */
-	public function testToStringOverride()
-	{
-		$bean = R::dispense('string');
-		$bean->text = '"Hello"';
-		$base64 = strval( $bean );
-		asrt( $base64, 'IkhlbGxvIg==' );
-	}
-
-	/**
-	 * Tests whether we can use RedBeanPHP core objects without
-	 * Facade related objects in a non-static style.
-	 *
-	 * @return void
-	 */
-	public function testLooselyWired()
-	{
-		$pdo = R::getDatabaseAdapter()->getDatabase()->getPDO();
-		$database = new RPDO( $pdo );
-		$adapter = new DBAdapter( $database );
-		if ($this->currentlyActiveDriverID == 'pgsql') $writer = new PostgreSQL( $adapter );
-		if ($this->currentlyActiveDriverID == 'mysql') $writer = new MySQL( $adapter );
-		if ($this->currentlyActiveDriverID == 'sqlite') $writer = new SQLiteT( $adapter );
-		if ($this->currentlyActiveDriverID == 'CUBRID') $writer = new CUBRID( $adapter );
-		$oodb = new OODB( $writer, FALSE );
-		$bean = $oodb->dispense( 'bean' );
-		$bean->name = 'coffeeBean';
-		$id = $oodb->store( $bean );
-		asrt( ( $id > 0 ), TRUE );
-		$bean = $oodb->load( 'bean', $id );
-		asrt( $bean->name, 'coffeeBean' );
-		asrt( $oodb->count( 'bean' ), 1 );
-		$oodb->trash( $bean );
-		asrt( $oodb->count( 'bean' ), 0 );
-	}
-
 	/**
 	 * From github (issue #549):
 	 * Imagine you have a simple Post object, which has a person_id and
@@ -122,7 +75,6 @@ class Bean extends Base
 		$out = "{$strA}{$strB}{$strC}";
 		asrt( $out, 'YYY' );
 		asrt( isset( $post->other ), FALSE );
-		asrt( $post->exists('comment'), FALSE );
 	}
 
 	/**
@@ -252,17 +204,6 @@ class Bean extends Base
 	}
 
 	/**
-	 * Can we set a date string by passing a date object?
-	 */
-	 public function testBeanDates()
-	 {
-		 $bean = R::dispense('bean');
-		 $dateTime = '1980-01-01 10:11:12';
-		 $bean->date = new \DateTime( $dateTime );
-		 asrt( $bean->date, $dateTime );
-	 }
-
-	/**
 	 * Only fire update query if the bean really contains different
 	 * values. But make sure beans several 'parents' away still get
 	 * saved.
@@ -282,7 +223,7 @@ class Bean extends Base
 		$i = $i->fresh();
 		asrt( $i->customer->city->state->name, 'x' );
 		$i->status = 1;
-		R::freeze( TRUE );
+		R::freeze( true );
 		$logger = R::debug( 1, 1 );
 		//do we properly skip unmodified but tainted parent beans?
 		R::store( $i );

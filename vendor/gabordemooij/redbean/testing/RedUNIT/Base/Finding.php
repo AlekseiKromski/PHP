@@ -9,7 +9,6 @@ use RedBeanPHP\OODB as OODB;
 use RedBeanPHP\OODBBean as OODBBean;
 use RedBeanPHP\RedException as RedException;
 use RedBeanPHP\RedException\SQL as SQL;
-use RedBeanPHP\Finder;
 
 /**
  * Finding
@@ -94,71 +93,27 @@ class Finding extends Base {
 	}
 
 	/**
-	 * Test NM-Map.
+	 * A custom record-to-bean mapping function for findMulti test.
 	 *
-	 * @return void
+	 * @param string $parentName name of the parent bean
+	 * @param string $childName  name of the child bean
+	 *
+	 * @return array
 	 */
-	public function testNMMap()
-	{
-		R::nuke();
-		$book1 = R::dispense( 'book' );
-		$book1->title = 'book 1';
-		R::tag( $book1, array('tag 1','tag 2') );
-		$book2 = R::dispense( 'book' );
-		$book2->title = 'book 2';
-		R::tag( $book2, array('tag 2', 'tag 3') );
-		$collection = R::findMulti( 'book,book_tag,tag',
-			'SELECT book.*, book_tag.*, tag.* FROM book
-			LEFT JOIN book_tag ON book_tag.book_id = book.id
-			LEFT JOIN tag ON book_tag.tag_id = tag.id
-			ORDER BY tag.title ASC
-			', array(), array(
-			Finder::nmMap( 'book', 'tag' ),
-		));
-		asrt( count( $collection ), 3 );
-		asrt( isset( $collection['book'] ), TRUE );
-		asrt( isset( $collection['book_tag'] ), TRUE );
-		asrt( isset( $collection['tag'] ), TRUE );
-		$books = $collection['book'];
-		foreach( $books as $book ) {
-			asrt( count( $book->noLoad()->sharedTagList ), 2 );
-			$tags = array();
-			if ( $book->title == 'book 1' ) {
-				foreach( $book->sharedTagList as $tag ) {
-					$tags[] = $tag->title;
-				}
-				asrt( implode( ',', $tags ), 'tag 1,tag 2' );
+	private function map($parentName,$childName) {
+		return array(
+			'a' => $parentName,
+			'b' => $childName,
+			'matcher' => function( $parent, $child ) use ( $parentName ) {
+				$property = "{$parentName}ID";
+				return ( $child->$property == $parent->id );
+			},
+			'do' => function( $parent, $child ) use ( $childName ) {
+				$list = 'own'.ucfirst( $childName ).'List';
+				$parent->noLoad()->{$list}[] = $child;
 			}
-			$tags = array();
-			if ( $book->title == 'book 2' ) {
-				foreach( $book->sharedTagList as $tag ) {
-					$tags[] = $tag->title;
-				}
-				asrt( implode( ',', $tags ), 'tag 2,tag 3' );
-			}
-		}
+		);
 	}
-
-	/**
-	 * Test explicit param binding.
-	 *
-	 * @return void
-	 */
-	 public function testExplParaBin()
-	 {
-		 R::nuke();
-		 $bean = R::dispense('bean');
-		 $bean->property = 1;
-		 $bean->property2 = 2;
-		 $bean->property3 = '3';
-		 R::store($bean);
-		 $value = 1;
-		 $value2 = 2;
-		 $value3 = '3';
-		 $found = R::findOne( 'bean', ' property = ? AND property2 = ? AND property3 = ? ',
-		 array($value, array( $value2, \PDO::PARAM_INT ),array( $value3, \PDO::PARAM_STR )));
-		 asrt( $bean->id, $found->id );
-	 }
 
 	/**
 	 * FindMulti should not throw errors in case of
@@ -187,54 +142,6 @@ class Finding extends Base {
 		asrt( is_array( $result['book'] ), TRUE );
 		asrt( count( $result['book'] ), 0 );
 		pass();
-	}
-
-	/**
-	 * Like testFindMultiExtFunc but uses findMulti with
-	 * $sql = NULL.
-	 *
-	 * @return void
-	 */
-	public function testFindMultiWithSQLNULL()
-	{
-		R::nuke();
-		$shop = R::dispense( 'shop' );
-		$shop2 = R::dispense( 'shop' );
-		$products = R::dispense( 'product', 3 );
-		$price = R::dispense( 'price' );
-		$price->tag = 5;
-		$products[0]->name = 'vase';
-		$products[1]->name = 'candle';
-		$products[2]->name = 'plate';
-		$products[1]->ownPriceList[] = $price;
-		$shop->ownProduct[] = $products[0];
-		$shop->ownProduct[] = $products[1];
-		$shop2->ownProduct[] = $products[2];
-		R::storeAll( array( $shop, $shop2 ) );
-		$collection = R::findMulti( 'shop,product,price', NULL, array(), array(
-			'0' => Finder::map( 'shop', 'product' ),
-			'1' => Finder::map( 'product', 'price' ),
-		));
-		asrt( is_array( $collection ), TRUE );
-		asrt( count( $collection ), 3 );
-		asrt( count( $collection['shop'] ), 2 );
-		asrt( count( $collection['product'] ), 3 );
-		asrt( count( $collection['price'] ), 1 );
-		$shop = reset( $collection['shop'] );
-		asrt( count( $shop->ownProductList ), 2 );
-		$shop2 = next( $collection['shop'] );
-		asrt( count( $shop2->ownProductList ), 1 );
-		$candle = NULL;
-		foreach( $shop->ownProduct as $product ) {
-				if ( $product->name == 'candle' ) {
-					$candle = $product;
-				}
-		}
-		asrt( is_null( $candle ), FALSE );
-		asrt( count( $candle->ownPrice ), 1 );
-		asrt( $candle->name, 'candle' );
-		$price = reset( $candle->ownPrice );
-		asrt( (int) $price->tag, 5 );
 	}
 
 	/**
@@ -269,8 +176,8 @@ class Finding extends Base {
 			LEFT JOIN product ON product.shop_id = shop.id
 			LEFT JOIN price ON price.product_id = product.id
 		', array(), array(
-			'0' => Finder::map( 'shop', 'product' ),
-			'1' => Finder::map( 'product', 'price' ),
+			'0' => $this->map( 'shop', 'product' ),
+			'1' => $this->map( 'product', 'price' ),
 		));
 		asrt( is_array( $collection ), TRUE );
 		asrt( count( $collection ), 3 );
@@ -337,8 +244,8 @@ class Finding extends Base {
 			LEFT JOIN product ON product.shop_id = shop.id
 			LEFT JOIN price ON price.product_id = product.id
 		', array(), array(
-			'0' => Finder::map('shop', 'product'),
-			'1' => Finder::map('product', 'price'),
+			'0' => $this->map('shop', 'product'),
+			'1' => $this->map('product', 'price'),
 		));
 		$collection = R::findMulti( 'shop,product', array(
 			array( 'shop__id' => 1, 'product__id' => 1, 'product__name' => 'vase', 'product__shop_id' => 1 ),
@@ -693,56 +600,6 @@ class Finding extends Base {
 	}
 
 	/**
-	 * Tests OODBBean as conditions
-	 *
-	 * @return void
-	 */
-	public function testFindLikeWithOODBBeans() {
-		R::nuke();
-		$book = R::dispense( 'book' );
-		$page = R::dispense( 'page' );
-		$page->book = $book;
-		R::store( $page );
-		$book2 = R::dispense( 'book' );
-		$page2 = R::dispense( 'page' );
-		$page2->book = $book2;
-		R::store( $page2 );
-		$pages = R::findLike( 'page', array( 'book_id' => array( 1, 2 ) ) );
-		$pagesWithOODB = R::findLike( 'page', array( 'book' => array( $book, $book2 ) ) );
-		asrt( count( $pagesWithOODB ), 2 );
-		asrt( json_encode($pagesWithOODB), json_encode($pages) );
-		asrt( reset( $pagesWithOODB )->id, $page->id );
-		asrt( end( $pagesWithOODB )->id, $page2->id );
-
-		$pages = R::findLike( 'page', array( 'book' => array( $book, $book2->id ) ) );
-		asrt( count( $pages ), 2 );
-		asrt( reset( $pages )->id, $page->id );
-		asrt( end( $pages )->id, $page2->id );
-
-		$pages = R::findLike( 'page', array( 'book_id' => array( $book->id, $book2 ) ) );
-		asrt( count( $pages ), 2 );
-		asrt( reset( $pages )->id, $page->id );
-		asrt( end( $pages )->id, $page2->id );
-
-		$pagesFail = R::findLike( 'page', array( 'book' => array( $book->id, $book2 ) ) );
-		asrt( count( $pagesFail ), 0 );
-
-		$book3 = R::dispense( 'book' );
-		$page3 = R::dispense( 'page' );
-		R::store( $page3 );
-		$page3->book = $book3;
-		$pagesFail = R::findLike( 'page', array( 'book' => $book3 ) );
-		asrt( count( $pagesFail ), 0 );
-
-		$pen = R::dispense( 'pen' );
-		R::store( $pen );
-		asrt( $pen->id, $book->id );
-		$pagesFail = R::findLike( 'page', array( 'book' => $pen ) );
-		asrt( count( $pagesFail ), 0 );
-
-	}
-
-	/**
 	 * Tests the findLike method.
 	 *
 	 * @return void
@@ -779,30 +636,6 @@ class Finding extends Base {
 		$books = R::findLike( 'magazine' );
 		asrt( is_array( $books ), TRUE );
 		asrt( count( $books ), 0 );
-	}
-
-	/**
-	 * Can we find books based on associations with other
-	 * entities?
-	 *
-	 * @return void
-	 */
-	public function testFindLikeBean()
-	{
-		R::nuke();
-		$book1 = R::dispense( 'book' );
-		$page1 = R::dispense( 'page' );
-		$book2 = R::dispense( 'book' );
-		$page2 = R::dispense( 'page' );
-		$book1->page = $page1;
-		$book2->page = $page2;
-		R::storeAll( array( $book1, $book2 ) );
-		$books = R::findLike( 'book', array( 'page' => array( $page2 ) ), ' AND id > ?', array( 0 ) );
-		$book = reset( $books );
-		asrt( $book->id, $book2->id );
-		$books = R::findLike( 'book', array( 'page' => array( $page1 ) ), ' AND id > ?', array( 0 )  );
-		$book = reset( $books );
-		asrt( $book->id, $book1->id );
 	}
 
 	/**

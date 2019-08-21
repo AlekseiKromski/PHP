@@ -1,11 +1,9 @@
 <?php
-/*
- * Конфигурационный файл, с помощю которого будет осуществленна работа класса Реестра
- * */
+
 return [
-    'admin_email' => 'admin@mail.ru',
-    'shop_name' => 'Магазин php',
+    'admin_email' => 'admin@mail.com',
+    'shop_name' => 'Магазин ishop2.loc',
     'pagination' => 3,
-    'smpt_login' => 'admin123',
-    'smtp_password' => '123',
+    'smtp_login' => '',
+    'smtp_password' => '',
 ];

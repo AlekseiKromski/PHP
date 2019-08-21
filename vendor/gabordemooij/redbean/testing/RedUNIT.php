@@ -45,16 +45,9 @@ abstract class RedUNIT
 	 */
 	public function prepare()
 	{
-		R::getDatabaseAdapter()->getDatabase()->connect();
-		try {
-			R::freeze( FALSE );
-			R::debug( FALSE );
-			R::nuke();
-		} catch( \Exception $e ) {
-			R::freeze( FALSE );
-			R::debug( FALSE );
-			R::nuke();
-		}
+		R::freeze( FALSE );
+		R::debug( FALSE );
+		R::nuke();
 	}
 
 	/**
@@ -68,7 +61,6 @@ abstract class RedUNIT
 	 */
 	public function run()
 	{
-		$old_error_handler = set_error_handler('redunit_error_handler');
 		$class = new \ReflectionClass( $this );
 		$skip = array( 'run', 'getTargetDrivers', 'onEvent', 'cleanUp', 'prepare' );
 		// Call all methods except run automatically
@@ -86,7 +78,6 @@ abstract class RedUNIT
 				// Some tests use a broken database on purpose, so an exception is ok
 			}
 		}
-		restore_error_handler();
 	}
 
 	/**

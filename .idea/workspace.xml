@@ -1,7 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c625a4cb-0deb-4519-a79d-e90f19b74f9a" name="Default Changelist" comment="" />
+    <list default="true" id="c625a4cb-0deb-4519-a79d-e90f19b74f9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PHP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PHP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/AppModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/AppModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Layouts/default.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Layouts/whatches.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/currency/Currency.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/currency/curenccy_tpl/currency.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Errors/404/404.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Errors/404/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Errors/dev/dev.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Errors/prod/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Errors/prod/prod.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/flexslider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/no_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/imagezoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/imagezoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.easydropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.easydropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/jquery.flexslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.flexslider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/responsiveslides.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/responsiveslides.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/simpleCart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/simpleCart.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/Errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/Errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/098f6bcd4621d373cade4e832627b4f6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/098f6bcd4621d373cade4e832627b4f6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/README.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/README.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Adapter/DBAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Adapter/DBAdapter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/AssociationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/AssociationManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanCollection.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper/SimpleFacadeBeanHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper/SimpleFacadeBeanHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/NullCursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/NullCursor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/PDOCursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/PDOCursor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/DuplicationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/DuplicationManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Facade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Facade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Finder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Finder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Logger/RDefault/Debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Logger/RDefault/Debug.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODB.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODBBean.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODBBean.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Observable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Observable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Plugin/Pool.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Plugin/TinyQueryBuilder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/CUBRID.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/CUBRID.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/Firebird.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/MySQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/MySQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/PostgreSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/PostgreSQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/SQLiteT.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/SQLiteT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/RedException/SQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/RedException/SQL.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Fluid.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Fluid.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Frozen.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Frozen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/SimpleModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/SimpleModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/TagManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/TagManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/ToolBox.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/ToolBox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/ArrayTool.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/ArrayTool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Diff.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Diff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Dump.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Dump.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Feature.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Look.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Look.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MatchUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MatchUp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MultiLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MultiLoader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Tree.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/license.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/loader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/replica2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/replica2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Aliasing.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Aliasing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Arrays.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Arrays.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Association.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Association.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Batch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Bean.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Bean.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Close.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Close.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Concurrency.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Count.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Count.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cross.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cross.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cursors.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cursors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dispense.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dispense.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dup.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Exceptions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Finding.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Finding.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Fuse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Fuse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Hybrid.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Misc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Misc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Nuke.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Nuke.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Productivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Productivity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/PullRequest530.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/PullRequest530.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Relations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Relations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Tags.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Trash.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Traverse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Traverse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Typechecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Typechecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Utf8.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Utf8.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Writecache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Writecache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Xnull.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Xnull.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Debug.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Export.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Export.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Import.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Import.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Misc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Misc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Stub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Toolbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Toolbox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/CUBRID/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/CUBRID/Setget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Foreignkeys.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Foreignkeys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Freeze.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Freeze.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Setget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Writer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Foreignkeys.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Foreignkeys.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Partial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Partial.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Setget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Trees.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Writer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Setget.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Writer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runperf.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runperf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runtests.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runtests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/classes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/App.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/Cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/Db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/ErrorHandler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/Registry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/Router.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/TSingletone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/Controller.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/Models.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/View.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/php/core/libs/function.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/checkout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/flexslider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/memenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/BreeSerif-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/Lato-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/Lora-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/Muli-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/Philosopher-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/abt-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/abt-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/abt-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/bnr-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/bnr-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/bnr-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/c-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/c-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/c-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/cart-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/cart-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/cart-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/crossword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/p-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/pr-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/pr-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/s-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/s-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/s-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/s-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/tick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/imagezoom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/jquery-1.11.0.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/jquery.easydropdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/jquery.flexslider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/memenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/responsiveslides.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/simpleCart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/typo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/w3layouts-License.txt" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,63 +247,6 @@
     <expand />
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Main/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="54" column="136" selection-start-line="54" selection-start-column="136" selection-end-line="54" selection-end-column="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/widgets/currency/Currency.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/AppController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-              <folding>
-                <element signature="e#37#61#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/widgets/currency/curenccy_tpl/currency.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Layouts/whatches.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>about</find>
@@ -93,200 +255,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/public/.htaccess" />
-        <option value="$PROJECT_DIR$/vendor/php/core/Tsingletone.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/TSingletone.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/Registry.php" />
-        <option value="$PROJECT_DIR$/config/params.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/libs/function.php" />
-        <option value="$PROJECT_DIR$/public/Errors/404.php" />
-        <option value="$PROJECT_DIR$/public/Errors/dev.php" />
-        <option value="$PROJECT_DIR$/public/Errors/404/404.php" />
-        <option value="$PROJECT_DIR$/public/Errors/prod.php" />
-        <option value="$PROJECT_DIR$/public/Errors/prod/prod.php" />
-        <option value="$PROJECT_DIR$/public/Errors/dev/dev.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/ErrorHandler.php" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/base/controller.php" />
-        <option value="$PROJECT_DIR$/app/controllers/PageController.php" />
-        <option value="$PROJECT_DIR$/app/views/Layouts/default.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/base/View.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/vendor/php/core/base/Models.php" />
-        <option value="$PROJECT_DIR$/app/models/AppModel.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/base/Controller.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/Db.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/Router.php" />
-        <option value="$PROJECT_DIR$/tmp/Errors.log" />
-        <option value="$PROJECT_DIR$/vendor/php/core/Cache.php" />
-        <option value="$PROJECT_DIR$/config/init.php" />
-        <option value="$PROJECT_DIR$/vendor/php/core/App.php" />
-        <option value="$PROJECT_DIR$/app/views/Layouts/whatches.php" />
-        <option value="$PROJECT_DIR$/config/config_db.php" />
-        <option value="$PROJECT_DIR$/app/controllers/MainController.php" />
-        <option value="$PROJECT_DIR$/app/views/Main/index.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/widgets/currency/Currency.php" />
-        <option value="$PROJECT_DIR$/app/controllers/AppController.php" />
-      </list>
-    </option>
-  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/php/core" />
       <path value="$PROJECT_DIR$/vendor/gabordemooij/redbean" />
+      <path value="$PROJECT_DIR$/vendor/ishop/core" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="412" />
-    <option name="y" value="-12" />
-    <option name="width" value="974" />
-    <option name="height" value="1057" />
-  </component>
+  <component name="ProjectId" id="1PjWbg7ZtgNmma6vDx7uV6B4D75" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="widgets" type="462c0819:PsiDirectoryNode" />
-              <item name="currency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PHP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PHP" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="php" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/php.sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -332,298 +316,22 @@
       <workItem from="1565341018205" duration="3457000" />
       <workItem from="1565644405241" duration="2497000" />
       <workItem from="1565680830970" duration="4384000" />
+      <workItem from="1566388066317" duration="2799000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43811000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27713382" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Database" order="3" weight="0.32982087" />
-      <window_info anchor="bottom" id="GraphQL" order="0" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3290461" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/base/function.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/TSingletone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/Registry.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Errors/404.php" />
-    <entry file="file://$PROJECT_DIR$/public/Errors/prod.php" />
-    <entry file="file://$PROJECT_DIR$/public/Errors/dev.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/ErrorHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Errors/404/404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Errors/dev/dev.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Errors/prod/prod.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="74" selection-start-line="37" selection-start-column="74" selection-end-line="37" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/libs/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/PageNewController.php" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/PageController.php" />
-    <entry file="file://$PROJECT_DIR$/app/views/Layouts/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/base/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/base/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/cache/098f6bcd4621d373cade4e832627b4f6.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="6" />
-          <folding>
-            <element signature="e#6#18#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/memenu.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmp/Errors.log">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/Cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/App.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/bnr-3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/bnr-2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/bnr-1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b61a7b12-4f58-4d1d-84c3-ea3f19e5173c/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c61b7af2-ec49-4b97-8b13-8d30986600f5/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="3069" column="23" selection-start-line="3069" selection-start-column="23" selection-end-line="3069" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Layouts/whatches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" selection-start-line="29" selection-end-line="31" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/currency/curenccy_tpl/currency.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MainController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="74" selection-start-line="13" selection-start-column="74" selection-end-line="13" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Main/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="54" column="136" selection-start-line="54" selection-start-column="136" selection-end-line="54" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php/core/base/Models.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/AppModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/widgets/currency/Currency.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding>
-            <element signature="e#37#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

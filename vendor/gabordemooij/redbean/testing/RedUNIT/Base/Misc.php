@@ -30,59 +30,6 @@ use RedBeanPHP\SimpleModel as SimpleModel;
 class Misc extends Base
 {
 	/**
-	 * Github issue:
-	 * Remove $NULL to directly return NULL #625
-	 * @@ -1097,8 +1097,7 @@ public function &__get( $property )
-	 *		$this->all        = FALSE;
-	 *		$this->via        = NULL;
-	 *
-	 * - $NULL = NULL;
-	 * - return $NULL;
-	 * + return NULL;
-	 *
-	 * leads to regression:
-	 * PHP Stack trace:
-	 * PHP 1. {main}() testje.php:0
-	 * PHP 2. RedBeanPHP\OODBBean->__get() testje.php:22
-	 * Notice: Only variable references should be returned by reference in rb.php on line 2529
-	 */
-	public function testReferencedGetInBeans()
-	{
-		$bean = R::dispense( 'bean' );
-		//this will trigger notice if &__get() returns NULL instead of $NULL.#625
-		$x = $bean->hello;
-		pass();
-		$x = $bean->reference;
-		pass();
-		$x = $bean->nullvalue;
-		pass();
-	}
-
-
-	public static $setupPartialBeansTestDone = 0;
-	/**
-	 * Check partial beans at setup()
-	 */
-	 public function testPartialBeansAtSetup()
-	 {
-		 if (self::$setupPartialBeansTestDone) return; /* only needs to be tested once */
-		 $key  = 'partialBeanBase' . time();
-		 $dsn  = 'sqlite:/tmp/test.txt';
-		 $user = '';
-		 $pass = '';
-		 $frozen = FALSE;
-		 $partialBeans = TRUE;
-		 R::addDatabase( $key, $dsn, $user, $pass, $frozen, $partialBeans);
-		 $redbean = R::getRedBean();
-		 $wasItSet = $redbean->getCurrentRepository()->usePartialBeans( FALSE );
-		 R::selectDatabase( $key );
-		 $redbean = R::getRedBean();
-		 $wasItSet = $redbean->getCurrentRepository()->usePartialBeans( FALSE );
-		 asrt( $wasItSet, TRUE );
-		 self::$setupPartialBeansTestDone = 1;
-	 }
-
-	/**
 	 * Test whether we can set the 'auto clear'
 	 * option in OODB.
 	 *
@@ -167,7 +114,7 @@ class Misc extends Base
 	public function testCheckDirectly()
 	{
 		$bean = new OODBBean;
-		$bean->setProperty('id', 0);
+		$bean->id = 0;
 		$bean->setMeta( 'type', 'book' );
 		R::getRedBean()->check( $bean );
 		$bean->setMeta( 'type', '.' );
@@ -352,28 +299,13 @@ class Misc extends Base
 	public function testTransactions()
 	{
 		testpack( 'transactions' );
-		$false = R::begin();
-		asrt( $false, FALSE );
+		R::begin();
 		$bean = R::dispense( 'bean' );
 		R::store( $bean );
 		R::commit();
 		asrt( R::count( 'bean' ), 1 );
-		R::trash( $bean );
-		R::setAllowFluidTransactions( TRUE );
-		asrt( R::begin(), TRUE );
-		$bean = R::dispense( 'bean' );
-		R::store( $bean );
-		asrt( R::commit(), TRUE );
-		asrt( R::count( 'bean' ), 1 );
-		R::trash( $bean );
-		asrt( R::begin(), TRUE );
-		$bean = R::dispense( 'bean' );
-		R::store( $bean );
-		R::rollback();
-		asrt( R::count( 'bean' ), 0 );
-		R::setAllowFluidTransactions( FALSE );
-		R::wipe('bean');
-		R::freeze( TRUE );
+		R::wipe( 'bean' );
+		R::freeze( 1 );
 		R::begin();
 		$bean = R::dispense( 'bean' );
 		R::store( $bean );
@@ -384,7 +316,6 @@ class Misc extends Base
 		asrt( R::genSlots( array( 'a', 'b' ) ), '?,?' );
 		asrt( R::genSlots( array( 'a' ) ), '?' );
 		asrt( R::genSlots( array() ), '' );
-		asrt( R::genSlots( array('a', 'b'), ' IN( %s ) ' ), ' IN( ?,? ) ' );
 	}
 
 	/**

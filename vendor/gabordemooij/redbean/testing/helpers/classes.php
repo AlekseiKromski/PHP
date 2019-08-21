@@ -159,14 +159,6 @@ class Model_Taste extends RedBeanPHP\SimpleModel
  */
 class Model_Coffee extends RedBeanPHP\SimpleModel
 {
-	public function __jsonSerialize()
-	{
-		return array_merge(
-			$this->bean->export(),
-			array( 'description' => "{$this->bean->variant}.{$this->bean->strength}" )
-		);
-	}
-
 	public function update()
 	{
 		while ( count( $this->bean->ownSugar ) > 3 ) {
@@ -483,11 +475,11 @@ class Model_BookBook extends \RedBean_SimpleModel {
 
 class Model_Feed extends \RedbeanPHP\SimpleModel {
     public function update() {
-        $this->bean->post = json_encode( $this->bean->post );
+        $this->bean->post = json_encode($this->bean->post);
     }
 
     public function open() {
-        $this->bean->post = json_decode( $this->bean->post, TRUE );
+        $this->bean->post = json_decode($this->bean->post, true);
     }
 }
 
@@ -577,6 +569,7 @@ class DiagnosticBean extends \RedBeanPHP\OODBBean {
 
 		return $modFlags;
 	}
+
 }
 
 class DiagnosticModel extends \RedBeanPHP\SimpleModel
@@ -671,114 +664,6 @@ class DiagnosticModel extends \RedBeanPHP\SimpleModel
 
 }
 
-class DatabaseCapabilityChecker extends \RedBeanPHP\Driver\RPDO {
-
-	public function __construct( \PDO $pdo )
-	{
-		$this->pdo = $pdo;
-	}
-
-	public function checkCapability( $capID )
-	{
-		return $this->hasCap( $capID );
-	}
-}
-
-class Model_String extends \RedBeanPHP\SimpleModel {
-	public function __toString() {
-		return base64_encode( $this->bean->text );
-	}
-}
-
 class Model_Probe extends DiagnosticModel {};
-
-class Mockdapter implements \RedBeanPHP\Adapter {
-
-	public function answer( $id )
-	{
-		$error = "error{$id}";
-		$property = "answer{$id}";
-		if (isset($this->$error)) throw $this->$error;
-		if (isset($this->$property)) return $this->$property;
-	}
-
-	public function getSQL(){}
-	public function exec( $sql, $bindings = array(), $noevent = FALSE ){ return $this->answer('Exec'); }
-	public function get( $sql, $bindings = array() ){ return $this->answer('GetSQL'); }
-	public function getRow( $sql, $bindings = array() ){ return array(); }
-	public function getCol( $sql, $bindings = array() ){ return $this->answer('GetCol'); }
-	public function getCell( $sql, $bindings = array() ){ return ''; }
-	public function getAssoc( $sql, $bindings = array() ){ return array();  }
-	public function getAssocRow( $sql, $bindings = array() ){ return array(); }
-	public function getInsertID(){}
-	public function getAffectedRows(){}
-	public function getCursor( $sql, $bindings = array() ){}
-	public function getDatabase(){}
-	public function startTransaction(){}
-	public function commit(){}
-	public function rollback(){}
-	public function close(){}
-	public function setOption( $optionKey, $optionValue ){}
-}
-
-/**
- * Custom Logger class.
- * For testing purposes.
- */
-class CustomLogger extends \RedBeanPHP\Logger\RDefault
-{
-
-	private $log;
-
-	public function getLogMessage()
-	{
-		return $this->log;
-	}
-
-	public function log()
-	{
-		$this->log = func_get_args();
-	}
-}
-
-
-class TestRPO extends \RedBeanPHP\Driver\RPDO {
-	public function testCap( $cap ) {
-		return $this->hasCap( $cap );
-	}
-}
-
-class MockPDO extends \PDO {
-	public $attributes = array();
-	public function __construct() { }
-	public function setAttribute( $att, $val = NULL )
-	{
-		$this->attributes[ $att ] = $val;
-	}
-	public function getDiagAttribute( $att )
-	{
-		return $this->attributes[ $att ];
-	}
-	public function getAttribute( $att ) {
-		if ($att == \PDO::ATTR_SERVER_VERSION) return '5.5.3';
-		return 'x';
-	}
-}
-
-class DiagnosticCUBRIDWriter extends \RedBeanPHP\QueryWriter\CUBRID {
-	public function callMethod( $method, $arg1 = NULL, $arg2 = NULL, $arg3 = NULL, $arg4 = NULL, $arg5 = NULL ) {
-		return $this->$method( $arg1, $arg2, $arg3, $arg4, $arg5 );
-	}
-}
-
-/**
- * Test Model that throws an exception upon update().
- */
-class Model_Brokentoy extends \RedbeanPHP\SimpleModel {
-	public function update(){
-		throw new \Exception('Totally on purpose.');
-	}
-}
-
 
 define('REDBEAN_OODBBEAN_CLASS', '\DiagnosticBean');

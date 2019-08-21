@@ -82,13 +82,18 @@ class SimpleFacadeBeanHelper implements BeanHelper
 				$modelName .= ucfirst( $part );
 			}
 			$modelName = $prefix . $modelName;
+
 			if ( !class_exists( $modelName ) ) {
+				//second try
 				$modelName = $prefix . ucfirst( $model );
+
 				if ( !class_exists( $modelName ) ) {
 					return NULL;
 				}
 			}
+
 		} else {
+
 			$modelName = $prefix . ucfirst( $model );
 			if ( !class_exists( $modelName ) ) {
 				return NULL;
@@ -96,6 +101,7 @@ class SimpleFacadeBeanHelper implements BeanHelper
 		}
 		$obj = self::factory( $modelName );
 		$obj->loadBean( $bean );
+
 		return $obj;
 	}
 

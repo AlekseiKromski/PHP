@@ -144,6 +144,7 @@ class Dispense extends Base
 		list( $beer ) = R::dispenseAll( 'beer*0', FALSE );
 		asrt( is_array( $beer ), FALSE );
 		asrt( is_null( $beer ), TRUE );
+		asrt( count( $beer ), 0 );
 	}
 
 	/**

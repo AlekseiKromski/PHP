@@ -15,7 +15,7 @@ use RedBeanPHP\Finder;
  * A matchUp is a match-and-update combination in terms of beans.
  * Typically login related problems are all about a match and
  * a conditional update.
- *
+ * 
  * @file    RedBeanPHP/Util/MatchUp.php
  * @author  Gabor de Mooij and the RedBeanPHP Community
  * @license BSD/GPLv2
@@ -60,9 +60,6 @@ class MatchUp
 	 * This method will return TRUE if the bean was found and FALSE if not AND
 	 * there was a NOT-FOUND task list. If no bean was found AND there was also
 	 * no second task list, NULL will be returned.
-	 *
-	 * To obtain the bean, pass a variable as the sixth parameter.
-	 * The function will put the matching bean in the specified variable.
 	 *
 	 * @param string   $type         type of bean you're looking for
 	 * @param string   $sql          SQL snippet (starting at the WHERE clause, omit WHERE-keyword)

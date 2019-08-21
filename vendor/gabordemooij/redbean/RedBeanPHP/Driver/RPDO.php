@@ -86,12 +86,7 @@ class RPDO implements Driver
 	/**
 	 * @var string
 	 */
-	protected $mysqlCharset = '';
-
-	/**
-	 * @var string
-	 */
-	protected $mysqlCollate = '';
+	protected $mysqlEncoding = '';
 
 	/**
 	 * @var boolean
@@ -116,29 +111,23 @@ class RPDO implements Driver
 	protected function bindParams( $statement, $bindings )
 	{
 		foreach ( $bindings as $key => &$value ) {
-			$k = is_integer( $key ) ? $key + 1 : $key;
-
-			if ( is_array( $value ) && count( $value ) == 2 ) {
-				$paramType = end( $value );
-				$value = reset( $value );
-			} else {
-				$paramType = NULL;
-			}
-
-			if ( is_null( $value ) ) {
-				$statement->bindValue( $k, NULL, \PDO::PARAM_NULL );
-				continue;
-			}
-
-			if ( $paramType != \PDO::PARAM_INT && $paramType != \PDO::PARAM_STR ) {
-				if ( !$this->flagUseStringOnlyBinding && AQueryWriter::canBeTreatedAsInt( $value ) && abs( $value ) <= $this->max ) {
-					$paramType = \PDO::PARAM_INT;
+			if ( is_integer( $key ) ) {
+				if ( is_null( $value ) ) {
+					$statement->bindValue( $key + 1, NULL, \PDO::PARAM_NULL );
+				} elseif ( !$this->flagUseStringOnlyBinding && AQueryWriter::canBeTreatedAsInt( $value ) && abs( $value ) <= $this->max ) {
+					$statement->bindParam( $key + 1, $value, \PDO::PARAM_INT );
 				} else {
-					$paramType = \PDO::PARAM_STR;
+					$statement->bindParam( $key + 1, $value, \PDO::PARAM_STR );
+				}
+			} else {
+				if ( is_null( $value ) ) {
+					$statement->bindValue( $key, NULL, \PDO::PARAM_NULL );
+				} elseif ( !$this->flagUseStringOnlyBinding && AQueryWriter::canBeTreatedAsInt( $value ) && abs( $value ) <= $this->max ) {
+					$statement->bindParam( $key, $value, \PDO::PARAM_INT );
+				} else {
+					$statement->bindParam( $key, $value, \PDO::PARAM_STR );
 				}
 			}
-
-			$statement->bindParam( $k, $value, $paramType );
 		}
 	}
 
@@ -164,8 +153,11 @@ class RPDO implements Driver
 		}
 		try {
 			if ( strpos( 'pgsql', $this->dsn ) === 0 ) {
-				//one line because unable to test this otherwise (coverage trick).
-				if ( defined( '\PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT' ) ) { $statement = $this->pdo->prepare( $sql, array( \PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT => TRUE ) ); } else { $statement = $this->pdo->prepare( $sql ); }
+				if ( defined( '\PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT' ) ) {
+					$statement = $this->pdo->prepare( $sql, array( \PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT => TRUE ) );
+				} else {
+					$statement = $this->pdo->prepare( $sql );
+				}
 			} else {
 				$statement = $this->pdo->prepare( $sql );
 			}
@@ -191,17 +183,16 @@ class RPDO implements Driver
 			//So we need a property to convey the SQL State code.
 			$err = $e->getMessage();
 			if ( $this->loggingEnabled && $this->logger ) $this->logger->log( 'An error occurred: ' . $err );
-			$exception = new SQL( $err, 0, $e );
+			$exception = new SQL( $err, 0 );
 			$exception->setSQLState( $e->getCode() );
-			$exception->setDriverDetails( $e->errorInfo );
 			throw $exception;
 		}
 	}
 
 	/**
 	 * Try to fix MySQL character encoding problems.
-	 * MySQL < 5.5.3 does not support proper 4 byte unicode but they
-	 * seem to have added it with version 5.5.3 under a different label: utf8mb4.
+	 * MySQL < 5.5 does not support proper 4 byte unicode but they
+	 * seem to have added it with version 5.5 under a different label: utf8mb4.
 	 * We try to select the best possible charset based on your version data.
 	 *
 	 * @return void
@@ -209,87 +200,22 @@ class RPDO implements Driver
 	protected function setEncoding()
 	{
 		$driver = $this->pdo->getAttribute( \PDO::ATTR_DRIVER_NAME );
+		$version = floatval( $this->pdo->getAttribute( \PDO::ATTR_SERVER_VERSION ) );
 		if ($driver === 'mysql') {
-			$charset = $this->hasCap( 'utf8mb4' ) ? 'utf8mb4' : 'utf8';
-			$collate = $this->hasCap( 'utf8mb4_520' ) ? '_unicode_520_ci' : '_unicode_ci';
-			$this->pdo->setAttribute(\PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES '. $charset ); //on every re-connect
-			/* #624 removed space before SET NAMES because it causes trouble with ProxySQL */
-			$this->pdo->exec('SET NAMES '. $charset); //also for current connection
-			$this->mysqlCharset = $charset;
-			$this->mysqlCollate = $charset . $collate;
+			$encoding = ($version >= 5.5) ? 'utf8mb4' : 'utf8';
+			$this->pdo->setAttribute(\PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES '.$encoding ); //on every re-connect
+			$this->pdo->exec(' SET NAMES '. $encoding); //also for current connection
+			$this->mysqlEncoding = $encoding;
 		}
-	}
-
-	/**
-	 * Determine if a database supports a particular feature.
-	 * Currently this function can be used to detect the following features:
-	 *
-	 * - utf8mb4
-	 * - utf8mb4 520
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $this->hasCap( 'utf8mb4_520' );
-	 * </code>
-	 *
-	 * By default, RedBeanPHP uses this method under the hood to make sure
-	 * you use the latest UTF8 encoding possible for your database.
-	 *
-	 * @param $db_cap identifier of database capability
-	 *
-	 * @return int|false Whether the database feature is supported, FALSE otherwise.
-	 **/
-	protected function hasCap( $db_cap )
-	{
-		$compare = FALSE;
-		$version = $this->pdo->getAttribute( \PDO::ATTR_SERVER_VERSION );
-		switch ( strtolower( $db_cap ) ) {
-			case 'utf8mb4':
-				//oneliner, to boost code coverage (coverage does not span versions)
-				if ( version_compare( $version, '5.5.3', '<' ) ) { return FALSE; }
-				$client_version = $this->pdo->getAttribute(\PDO::ATTR_CLIENT_VERSION );
-				/*
-				 * libmysql has supported utf8mb4 since 5.5.3, same as the MySQL server.
-				 * mysqlnd has supported utf8mb4 since 5.0.9.
-				 */
-				if ( strpos( $client_version, 'mysqlnd' ) !== FALSE ) {
-					$client_version = preg_replace( '/^\D+([\d.]+).*/', '$1', $client_version );
-					$compare = version_compare( $client_version, '5.0.9', '>=' );
-				} else {
-					$compare = version_compare( $client_version, '5.5.3', '>=' );
-				}
-			break;
-			case 'utf8mb4_520':
-				$compare = version_compare( $version, '5.6', '>=' );
-			break;
-		}
-
-		return $compare;
 	}
 
 	/**
 	 * Constructor. You may either specify dsn, user and password or
 	 * just give an existing PDO connection.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $driver = new RPDO( $dsn, $user, $password );
-	 * </code>
-	 *
-	 * The example above illustrates how to create a driver
-	 * instance from a database connection string (dsn), a username
-	 * and a password. It's also possible to pass a PDO object.
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $driver = new RPDO( $existingConnection );
-	 * </code>
-	 *
-	 * The second example shows how to create an RPDO instance
-	 * from an existing PDO object.
+	 * Examples:
+	 *    $driver = new RPDO($dsn, $user, $password);
+	 *    $driver = new RPDO($existingConnection);
 	 *
 	 * @param string|object $dsn  database connection string
 	 * @param string        $user optional, usename to sign in
@@ -324,21 +250,6 @@ class RPDO implements Driver
 
 	/**
 	 * Sets PDO in stringify fetch mode.
-	 * If set to TRUE, this method will make sure all data retrieved from
-	 * the database will be fetched as a string. Default: TRUE.
-	 *
-	 * To set it to FALSE...
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * R::getDatabaseAdapter()->getDatabase()->stringifyFetches( FALSE );
-	 * </code>
-	 *
-	 * Important!
-	 * Note, this method only works if you set the value BEFORE the connection
-	 * has been establish. Also, this setting ONLY works with SOME drivers.
-	 * It's up to the driver to honour this setting.
 	 *
 	 * @param boolean $bool
 	 */
@@ -348,26 +259,12 @@ class RPDO implements Driver
 
 	/**
 	 * Returns the best possible encoding for MySQL based on version data.
-	 * This method can be used to obtain the best character set parameters
-	 * possible for your database when constructing a table creation query
-	 * containing clauses like:  CHARSET=... COLLATE=...
-	 * This is a MySQL-specific method and not part of the driver interface.
 	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $charset_collate = $this->adapter->getDatabase()->getMysqlEncoding( TRUE );
-	 * </code>
-	 *
-	 * @param boolean $retCol pass TRUE to return both charset/collate
-	 *
-	 * @return string|array
+	 * @return string
 	 */
-	public function getMysqlEncoding( $retCol = FALSE )
+	public function getMysqlEncoding()
 	{
-		if( $retCol )
-			return array( 'charset' => $this->mysqlCharset, 'collate' => $this->mysqlCollate );
-		return $this->mysqlCharset;
+		return $this->mysqlEncoding;
 	}
 
 	/**
@@ -419,7 +316,11 @@ class RPDO implements Driver
 		try {
 			$user = $this->connectInfo['user'];
 			$pass = $this->connectInfo['pass'];
-			$this->pdo = new \PDO( $this->dsn, $user, $pass );
+			$this->pdo = new \PDO(
+				$this->dsn,
+				$user,
+				$pass
+			);
 			$this->setEncoding();
 			$this->pdo->setAttribute( \PDO::ATTR_STRINGIFY_FETCHES, $this->stringifyFetches );
 			//cant pass these as argument to constructor, CUBRID driver does not understand...
@@ -480,14 +381,11 @@ class RPDO implements Driver
 	public function GetCol( $sql, $bindings = array() )
 	{
 		$rows = $this->GetAll( $sql, $bindings );
-
-		if ( empty( $rows ) || !is_array( $rows ) ) {
-			return array();
-		}
-
 		$cols = array();
-		foreach ( $rows as $row ) {
-			$cols[] = reset( $row );
+		if ( $rows && is_array( $rows ) && count( $rows ) > 0 ) {
+			foreach ( $rows as $row ) {
+				$cols[] = array_shift( $row );
+			}
 		}
 
 		return $cols;
@@ -499,12 +397,14 @@ class RPDO implements Driver
 	public function GetOne( $sql, $bindings = array() )
 	{
 		$arr = $this->GetAll( $sql, $bindings );
-
-		if ( empty( $arr[0] ) || !is_array( $arr[0] ) ) {
-			return NULL;
-		}
-
-		return reset( $arr[0] );
+		$res = NULL;
+		if ( !is_array( $arr ) ) return NULL;
+		if ( count( $arr ) === 0 ) return NULL;
+		$row1 = array_shift( $arr );
+		if ( !is_array( $row1 ) ) return NULL;
+		if ( count( $row1 ) === 0 ) return NULL;
+		$col1 = array_shift( $row1 );
+		return $col1;
 	}
 
 	/**
@@ -527,12 +427,7 @@ class RPDO implements Driver
 	public function GetRow( $sql, $bindings = array() )
 	{
 		$arr = $this->GetAll( $sql, $bindings );
-
-		if ( is_array( $arr ) && count( $arr ) ) {
-			return reset( $arr );
-		}
-
-		return array();
+		return array_shift( $arr );
 	}
 
 	/**
@@ -574,7 +469,14 @@ class RPDO implements Driver
 	}
 
 	/**
-	 * @see Driver::setDebugMode
+	 * Toggles debug mode. In debug mode the driver will print all
+	 * SQL to the screen together with some information about the
+	 * results.
+	 *
+	 * @param boolean $trueFalse turn on/off
+	 * @param Logger  $logger    logger instance
+	 *
+	 * @return void
 	 */
 	public function setDebugMode( $tf, $logger = NULL )
 	{
@@ -590,30 +492,13 @@ class RPDO implements Driver
 	 * Injects Logger object.
 	 * Sets the logger instance you wish to use.
 	 *
-	 * This method is for more fine-grained control. Normally
-	 * you should use the facade to start the query debugger for
-	 * you. The facade will manage the object wirings necessary
-	 * to use the debugging functionality.
-	 *
-	 * Usage (through facade):
-	 *
-	 * <code>
-	 * R::debug( TRUE );
-	 * ...rest of program...
-	 * R::debug( FALSE );
-	 * </code>
-	 *
-	 * The example above illustrates how to use the RedBeanPHP
-	 * query debugger through the facade.
-	 *
 	 * @param Logger $logger the logger instance to be used for logging
 	 *
-	 * @return self
+	 * @return void
 	 */
 	public function setLogger( Logger $logger )
 	{
 		$this->logger = $logger;
-		return $this;
 	}
 
 	/**
@@ -657,58 +542,19 @@ class RPDO implements Driver
 	/**
 	 * Returns the name of database driver for PDO.
 	 * Uses the PDO attribute DRIVER NAME to obtain the name of the
-	 * PDO driver. Use this method to identify the current PDO driver
-	 * used to provide access to the database. Example of a database
-	 * driver string:
-	 *
-	 * <code>
-	 * mysql
-	 * </code>
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * echo R::getDatabaseAdapter()->getDatabase()->getDatabaseType();
-	 * </code>
-	 *
-	 * The example above prints the current database driver string to
-	 * stdout.
-	 *
-	 * Note that this is a driver-specific method, not part of the
-	 * driver interface. This method might not be available in other
-	 * drivers since it relies on PDO.
+	 * PDO driver.
 	 *
 	 * @return string
 	 */
 	public function getDatabaseType()
 	{
 		$this->connect();
+
 		return $this->pdo->getAttribute(\PDO::ATTR_DRIVER_NAME );
 	}
 
 	/**
-	 * Returns the version identifier string of the database.
-	 * This method can be used to identify the currently installed
-	 * database. Note that this method will also establish a connection
-	 * (because this is required to obtain the version information).
-	 *
-	 * Example of a version string:
-	 *
-	 * <code>
-	 * mysqlnd 5.0.12-dev - 20150407 - $Id: b5c5906d452ec590732a93b051f3827e02749b83 $
-	 * </code>
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * echo R::getDatabaseAdapter()->getDatabase()->getDatabaseVersion();
-	 * </code>
-	 *
-	 * The example above will print the version string to stdout.
-	 *
-	 * Note that this is a driver-specific method, not part of the
-	 * driver interface. This method might not be available in other
-	 * drivers since it relies on PDO.
+	 * Returns the version number of the database.
 	 *
 	 * @return mixed
 	 */
@@ -720,17 +566,6 @@ class RPDO implements Driver
 
 	/**
 	 * Returns the underlying PHP PDO instance.
-	 * For some low-level database operations you'll need access to the PDO
-	 * object. Not that this method is only available in RPDO and other
-	 * PDO based database drivers for RedBeanPHP. Other drivers may not have
-	 * a method like this. The following example demonstrates how to obtain
-	 * a reference to the PDO instance from the facade:
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * $pdo = R::getDatabaseAdapter()->getDatabase()->getPDO();
-	 * </code>
 	 *
 	 * @return PDO
 	 */
@@ -741,18 +576,7 @@ class RPDO implements Driver
 	}
 
 	/**
-	 * Closes the database connection.
-	 * While database connections are closed automatically at the end of the PHP script,
-	 * closing database connections is generally recommended to improve performance.
-	 * Closing a database connection will immediately return the resources to PHP.
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * R::setup( ... );
-	 * ... do stuff ...
-	 * R::close();
-	 * </code>
+	 * Closes database connection by destructing PDO.
 	 *
 	 * @return void
 	 */
@@ -782,22 +606,10 @@ class RPDO implements Driver
 	public function setEnableLogging( $enable )
 	{
 		$this->loggingEnabled = (boolean) $enable;
-		return $this;
 	}
 
 	/**
-	 * Resets the query counter.
-	 * The query counter can be used to monitor the number
-	 * of database queries that have
-	 * been processed according to the database driver. You can use this
-	 * to monitor the number of queries required to render a page.
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * R::resetQueryCount();
-	 * echo R::getQueryCount() . ' queries processed.';
-	 * </code>
+	 * Resets the internal Query Counter.
 	 *
 	 * @return self
 	 */
@@ -809,15 +621,6 @@ class RPDO implements Driver
 
 	/**
 	 * Returns the number of SQL queries processed.
-	 * This method returns the number of database queries that have
-	 * been processed according to the database driver. You can use this
-	 * to monitor the number of queries required to render a page.
-	 *
-	 * Usage:
-	 *
-	 * <code>
-	 * echo R::getQueryCount() . ' queries processed.';
-	 * </code>
 	 *
 	 * @return integer
 	 */

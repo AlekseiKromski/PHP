@@ -9,10 +9,7 @@ use RedBeanPHP\RedException\SQL as SQLException;
 
 /**
  * Association Manager.
- * The association manager can be used to create and manage
- * many-to-many relations (for example sharedLists). In a many-to-many relation,
- * one bean can be associated with many other beans, while each of those beans
- * can also be related to multiple beans.
+ * Manages simple bean associations.
  *
  * @file    RedBeanPHP/AssociationManager.php
  * @author  Gabor de Mooij and the RedBeanPHP Community
@@ -41,21 +38,9 @@ class AssociationManager extends Observable
 	protected $writer;
 
 	/**
-	 * Exception handler.
-	 * Fluid and Frozen mode have different ways of handling
-	 * exceptions. Fluid mode (using the fluid repository) ignores
-	 * exceptions caused by the following:
+	 * Handles exceptions. Suppresses exceptions caused by missing structures.
 	 *
-	 * - missing tables
-	 * - missing column
-	 *
-	 * In these situations, the repository will behave as if
-	 * no beans could be found. This is because in fluid mode
-	 * it might happen to query a table or column that has not been
-	 * created yet. In frozen mode, this is not supposed to happen
-	 * and the corresponding exceptions will be thrown.
-	 *
-	 * @param \Exception $exception exception
+	 * @param \Exception $exception exception to handle
 	 *
 	 * @return void
 	 */
@@ -64,8 +49,7 @@ class AssociationManager extends Observable
 		if ( $this->oodb->isFrozen() || !$this->writer->sqlStateIn( $exception->getSQLState(),
 			array(
 				QueryWriter::C_SQLSTATE_NO_SUCH_TABLE,
-				QueryWriter::C_SQLSTATE_NO_SUCH_COLUMN ),
-				$exception->getDriverDetails()
+				QueryWriter::C_SQLSTATE_NO_SUCH_COLUMN )
 			)
 		) {
 			throw $exception;
@@ -135,8 +119,7 @@ class AssociationManager extends Observable
 			$results[] = $id;
 		} catch ( SQLException $exception ) {
 			if ( !$this->writer->sqlStateIn( $exception->getSQLState(),
-				array( QueryWriter::C_SQLSTATE_INTEGRITY_CONSTRAINT_VIOLATION ),
-				$exception->getDriverDetails() )
+				array( QueryWriter::C_SQLSTATE_INTEGRITY_CONSTRAINT_VIOLATION ) )
 			) {
 				throw $exception;
 			}
@@ -146,14 +129,9 @@ class AssociationManager extends Observable
 	}
 
 	/**
-	 * Constructor, creates a new instance of the Association Manager.
-	 * The association manager can be used to create and manage
-	 * many-to-many relations (for example sharedLists). In a many-to-many relation,
-	 * one bean can be associated with many other beans, while each of those beans
-	 * can also be related to multiple beans. To create an Association Manager
-	 * instance you'll need to pass a ToolBox object.
+	 * Constructor
 	 *
-	 * @param ToolBox $tools toolbox supplying core RedBeanPHP objects
+	 * @param ToolBox $tools toolbox
 	 */
 	public function __construct( ToolBox $tools )
 	{
@@ -255,8 +233,8 @@ class AssociationManager extends Observable
 	 * set to boolean TRUE this method will remove the beans without their consent,
 	 * bypassing FUSE. This can be used to improve performance.
 	 *
-	 * @param OODBBean $beans1 first bean in target association
-	 * @param OODBBean $beans2 second bean in target association
+	 * @param OODBBean $bean1 first bean in target association
+	 * @param OODBBean $bean2 second bean in target association
 	 * @param boolean  $fast  if TRUE, removes the entries by query without FUSE
 	 *
 	 * @return void
@@ -276,9 +254,6 @@ class AssociationManager extends Observable
 					$type2 = $bean2->getMeta( 'type' );
 
 					$row      = $this->writer->queryRecordLink( $type1, $type2, $bean1->id, $bean2->id );
-
-					if ( !$row ) return;
-
 					$linkType = $this->getTable( array( $type1, $type2 ) );
 
 					if ( $fast ) {
