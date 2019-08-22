@@ -2,224 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c625a4cb-0deb-4519-a79d-e90f19b74f9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PHP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PHP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/AppModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/AppModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Layouts/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Layouts/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Layouts/whatches.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/currency/Currency.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/currency/curenccy_tpl/currency.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/params.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Errors/404/404.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Errors/404/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Errors/dev/dev.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Errors/prod/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Errors/prod/prod.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/flexslider.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/flexslider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/no_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/imagezoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/imagezoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery-1.11.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery-1.11.0.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery.easydropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.easydropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/jquery.flexslider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/jquery.flexslider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/responsiveslides.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/responsiveslides.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/simpleCart.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/simpleCart.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/Errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/Errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/098f6bcd4621d373cade4e832627b4f6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/098f6bcd4621d373cade4e832627b4f6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/README.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/README.markdown" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Adapter/DBAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Adapter/DBAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/AssociationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/AssociationManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper/SimpleFacadeBeanHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/BeanHelper/SimpleFacadeBeanHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/NullCursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/NullCursor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/PDOCursor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Cursor/PDOCursor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Driver/RPDO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/DuplicationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/DuplicationManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Facade.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Facade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Finder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Finder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Logger/RDefault/Debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Logger/RDefault/Debug.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODB.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODBBean.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/OODBBean.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Observable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Observable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Plugin/Pool.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Plugin/TinyQueryBuilder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/AQueryWriter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/CUBRID.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/CUBRID.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/Firebird.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/MySQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/MySQL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/PostgreSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/PostgreSQL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/SQLiteT.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/QueryWriter/SQLiteT.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/RedException/SQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/RedException/SQL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Fluid.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Fluid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Frozen.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Repository/Frozen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/SimpleModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/SimpleModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/TagManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/TagManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/ToolBox.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/ToolBox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/ArrayTool.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/ArrayTool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Diff.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Diff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/DispenseHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Dump.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Dump.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Feature.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Look.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Look.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MatchUp.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MatchUp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MultiLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/MultiLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/QuickExport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/Util/Tree.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/license.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/loader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/RedBeanPHP/loader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/replica2.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/replica2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Aliasing.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Aliasing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Arrays.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Arrays.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Association.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Association.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Batch.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Batch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Bean.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Bean.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Close.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Close.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Concurrency.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Count.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Count.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cross.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cross.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cursors.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Cursors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dispense.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dispense.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dup.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Dup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Exceptions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Finding.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Finding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Fuse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Fuse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Hybrid.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Misc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Misc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Nuke.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Nuke.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Productivity.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Productivity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/PullRequest530.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/PullRequest530.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Relations.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Relations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Tags.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Trash.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Traverse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Traverse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Typechecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Typechecking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Utf8.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Utf8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Writecache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Writecache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Xnull.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Base/Xnull.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Debug.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Export.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Export.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Import.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Misc.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Misc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Stub.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Toolbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Blackhole/Toolbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/CUBRID/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/CUBRID/Setget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Foreignkeys.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Foreignkeys.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Freeze.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Freeze.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Setget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Mysql/Writer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Foreignkeys.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Foreignkeys.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Partial.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Partial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Setget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Trees.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Postgres/Writer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Setget.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Setget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Writer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/RedUNIT/Sqlite/Writer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runperf.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runperf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runtests.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/cli/runtests.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/classes.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/classes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/gabordemooij/redbean/testing/helpers/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/App.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/Cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/Db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/ErrorHandler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/Registry.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/Router.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/TSingletone.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/Models.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/base/View.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/php/core/libs/function.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/account.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/checkout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/flexslider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/memenu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/BreeSerif-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/Lato-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/Lora-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/Muli-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/Philosopher-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/abt-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/abt-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/abt-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/bnr-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/bnr-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/bnr-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/c-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/c-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/c-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/cart-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/cart-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/cart-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/crossword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/p-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/pr-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/pr-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/s-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/s-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/s-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/s-icons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/images/tick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/imagezoom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery-1.11.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery.easydropdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/jquery.flexslider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/memenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/responsiveslides.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/simpleCart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/products.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/single.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/typo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/w3layouts-License.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -316,7 +102,8 @@
       <workItem from="1565341018205" duration="3457000" />
       <workItem from="1565644405241" duration="2497000" />
       <workItem from="1565680830970" duration="4384000" />
-      <workItem from="1566388066317" duration="2799000" />
+      <workItem from="1566388066317" duration="3421000" />
+      <workItem from="1566456928292" duration="567000" />
     </task>
     <servers />
   </component>
@@ -328,7 +115,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

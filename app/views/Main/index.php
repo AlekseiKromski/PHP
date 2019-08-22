@@ -18,40 +18,26 @@
 <!--banner-ends-->
 
 <!--about-starts-->
+<?php if($brands): ?>
 <div class="about">
     <div class="container">
         <div class="about-top grid-1">
-            <div class="col-md-4 about-left">
+            <?php foreach ($brands as $brand): ?>
+                <div class="col-md-4 about-left">
                 <figure class="effect-bubba">
-                    <img class="img-responsive" src="images/abt-1.jpg" alt=""/>
+                    <img class="img-responsive" src="images/<?php echo $brand['img'] ?>" alt="<?php echo $brand['alias'] ?>"/>
                     <figcaption>
-                        <h2>Nulla maximus nunc</h2>
-                        <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                        <h2><?php echo $brand['title'] ?></h2>
+                        <p><?php echo $brand['description'] ?> </p>
                     </figcaption>
                 </figure>
             </div>
-            <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="images/abt-2.jpg" alt=""/>
-                    <figcaption>
-                        <h4>Mauris erat augue</h4>
-                        <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-                    </figcaption>
-                </figure>
-            </div>
-            <div class="col-md-4 about-left">
-                <figure class="effect-bubba">
-                    <img class="img-responsive" src="images/abt-3.jpg" alt=""/>
-                    <figcaption>
-                        <h4>Cras elit mauris</h4>
-                        <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-                    </figcaption>
-                </figure>
-            </div>
+            <?php endforeach; ?>
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
+<?php endif;?>
 <!--about-end-->
 <!--product-starts-->
 <div class="product">
