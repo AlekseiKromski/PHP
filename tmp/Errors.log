@@ -314,3 +314,7 @@
 =================
 [2019-08-22 10:45:11] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
 =================
+[2019-08-22 11:15:02] Текст ошибки: Call to protected method app\widgets\Currency\Currency::getCurrencies() from context 'app\controllers\AppController' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 14
+=================
+[2019-08-22 11:28:32] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================

@@ -51,7 +51,7 @@
                         <a href="product/<?= $hit->alias; ?>" class="mask"><img class="img-responsive zoom-img" src="images/<?php echo $hit['img'];?>" alt="" /></a>
                         <div class="product-bottom">
                             <h3><a href="product/<?php echo $hit['alias'];?>"><?php echo $hit['title'];?></a></h3>
-                            <p>Explore Now</p>
+                            <p> </p>
                             <h4><a class="add-to-cart-link" href="cart/add?id=<?php echo $hit['id'];?>"><i></i></a> <span class=" item_price"><?php echo $hit['price'];?>$</span>
                             <?php
                                 if ($hit['old_price']){
