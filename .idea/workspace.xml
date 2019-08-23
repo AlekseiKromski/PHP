@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c625a4cb-0deb-4519-a79d-e90f19b74f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/widgets/Currency/Currency.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/widgets/Currency/currency_tpl/currency.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/CurrencyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/Currency/Currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/Currency/Currency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/widgets/Currency/currency_tpl/currency.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/widgets/Currency/currency_tpl/currency.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/Errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/Errors.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +37,13 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -106,6 +117,8 @@
       <workItem from="1565680830970" duration="4384000" />
       <workItem from="1566388066317" duration="3421000" />
       <workItem from="1566456928292" duration="5549000" />
+      <workItem from="1566558780542" duration="610000" />
+      <workItem from="1566560128262" duration="1432000" />
     </task>
     <servers />
   </component>
