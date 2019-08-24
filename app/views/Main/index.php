@@ -41,6 +41,7 @@
 <!--about-end-->
 <!--product-starts-->
 <?php if($hits): ?>
+    <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="product">
     <div class="container">
         <div class="product-top">
@@ -52,11 +53,11 @@
                         <div class="product-bottom">
                             <h3><a href="product/<?php echo $hit['alias'];?>"><?php echo $hit['title'];?></a></h3>
                             <p> </p>
-                            <h4><a class="add-to-cart-link" href="cart/add?id=<?php echo $hit['id'];?>"><i></i></a> <span class=" item_price"><?php echo $hit['price'];?>$</span>
+                            <h4><a class="add-to-cart-link" href="cart/add?id=<?php echo $hit['id'];?>"><i></i></a> <span class=" item_price"><?php echo $hit['price'] * $curr['value'];?><?php echo $curr['symbol_left']?></span>
                             <?php
                                 if ($hit['old_price']){
                                     ?>
-                                        <small><del><?php echo $hit['old_price'];?>$</del></small>
+                                        <small><del><?php echo $hit['old_price'] *  $curr['value'];?><?php echo $curr['symbol_left']?></del></small>
                                     <?php
                                 }
                             ?>
@@ -66,8 +67,10 @@
                             <?php if($hit['old_price']):?>
                                 <span>
                                     <?php
-                                        $result = $hit['old_price'] - $hit['price'];
-                                        $result = ($result * 100) / $hit['old_price'];
+                                        $hit_old_price = $hit['old_price'] * $curr['value'];
+                                        $price = $hit['price'] * $curr['value'];
+                                        $result = $hit_old_price - $price;
+                                        $result = ($result * 100) / $hit_old_price;
                                         $result = round($result);
                                         echo $result . '%';
                                     ?>
