@@ -1,0 +1,41 @@
+a:2:{s:4:"data";s:1005:"<li>
+    <a href="?id=1">Men</a>
+            <ul>
+            <li>
+    <a href="?id=4">Электронные</a>
+            <ul>
+            <li>
+    <a href="?id=6">Casio</a>
+    </li><li>
+    <a href="?id=7">Citizen</a>
+    </li>        </ul>
+    </li><li>
+    <a href="?id=5">Механические</a>
+            <ul>
+            <li>
+    <a href="?id=8">Royal London</a>
+    </li><li>
+    <a href="?id=9">Seiko</a>
+    </li><li>
+    <a href="?id=10">Epos</a>
+    </li>        </ul>
+    </li>        </ul>
+    </li><li>
+    <a href="?id=2">Women</a>
+            <ul>
+            <li>
+    <a href="?id=11">Электронные</a>
+            <ul>
+            <li>
+    <a href="?id=13">Adriatica</a>
+    </li>        </ul>
+    </li><li>
+    <a href="?id=12">Механические</a>
+            <ul>
+            <li>
+    <a href="?id=14">Anne Klein</a>
+    </li>        </ul>
+    </li>        </ul>
+    </li><li>
+    <a href="?id=3">Kids</a>
+    </li>";s:8:"end_time";i:1566686252;}
