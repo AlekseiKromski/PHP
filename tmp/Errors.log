@@ -328,3 +328,5 @@
 =================
 [2019-08-23 14:43:18] Текст ошибки: Class 'app\widgets\Currency\App' not found | Файл: C:\OSPanel\domains\PHP\app\widgets\Currency\Currency.php | Строка: 20
 =================
+[2019-08-24 13:52:19] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================

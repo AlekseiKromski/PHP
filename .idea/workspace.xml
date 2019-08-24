@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c625a4cb-0deb-4519-a79d-e90f19b74f9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/widgets/Menu/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/menu/menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/menu/menu_tpl/menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Layouts/watches.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/Errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/Errors.log" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +117,7 @@
       <workItem from="1566388066317" duration="3421000" />
       <workItem from="1566456928292" duration="5549000" />
       <workItem from="1566558780542" duration="610000" />
-      <workItem from="1566560128262" duration="4047000" />
+      <workItem from="1566560128262" duration="6521000" />
     </task>
     <servers />
   </component>
