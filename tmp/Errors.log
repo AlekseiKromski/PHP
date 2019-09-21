@@ -280,3 +280,17 @@
 =================
 [2019-09-21 17:50:08] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
 =================
+[2019-09-21 19:41:38] Текст ошибки: syntax error, unexpected '$hits' (T_VARIABLE) | Файл: C:\OSPanel\domains\PHP\app\views\Main\index.php | Строка: 58
+=================
+[2019-09-21 19:42:24] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-09-21 19:42:35] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-09-21 19:42:59] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-09-21 19:43:24] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-09-21 19:43:57] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+=================
+[2019-09-21 20:00:07] Текст ошибки: syntax error, unexpected ')' | Файл: C:\OSPanel\domains\PHP\app\views\Main\index.php | Строка: 82
+=================

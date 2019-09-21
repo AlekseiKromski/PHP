@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e366dc5c-b7a6-4702-aeb8-17f7f767edde" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/CurrencyController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Layouts/watches.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Layouts/watches.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Main/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Main/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/Currency/Currency.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/Currency/currency_tpl/currency.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/Menu/Menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/widgets/Menu/menu_tpl/menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config_db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ishop2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/no_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/menu/menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/Errors.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/Errors.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/0832c1202da8d382318e329a7c133ea0.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/9297fd88a237b4c249515d1022b29f09.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/Cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/Cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ishop/core/libs/functions.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +89,7 @@
       <workItem from="1503311565516" duration="37000" />
       <workItem from="1503317705925" duration="3901000" />
       <workItem from="1503380923201" duration="1071000" />
-      <workItem from="1569077272262" duration="1767000" />
+      <workItem from="1569077272262" duration="4458000" />
     </task>
     <servers />
   </component>
