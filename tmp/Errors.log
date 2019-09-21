@@ -272,63 +272,11 @@
 =================
 [2017-08-22 08:54:19] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-08-21 15:34:16] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
+[2019-09-21 17:48:27] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
 =================
-[2019-08-22 09:54:58] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+[2019-09-21 17:48:27] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-08-22 10:13:05] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+[2019-09-21 17:50:01] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
 =================
-[2019-08-22 10:13:21] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:13:51] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:14:39] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:15:20] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:18:36] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:19:29] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:23:40] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:25:01] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:25:31] Текст ошибки: Контроллер app\controllers\CartController не найден | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 36
-=================
-[2019-08-22 10:26:05] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:26:27] Текст ошибки: syntax error, unexpected '?>', expecting variable (T_VARIABLE) or '{' or '$' | Файл: C:\OSPanel\domains\PHP\app\views\Main\index.php | Строка: 55
-=================
-[2019-08-22 10:26:49] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:33:28] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:34:20] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:34:31] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:35:35] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:41:04] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 10:45:11] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-22 11:15:02] Текст ошибки: Call to protected method app\widgets\Currency\Currency::getCurrencies() from context 'app\controllers\AppController' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 14
-=================
-[2019-08-22 11:28:32] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-23 14:13:17] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-23 14:39:18] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-23 14:41:36] Текст ошибки: Class 'app\widgets\Currency\App' not found | Файл: C:\OSPanel\domains\PHP\app\widgets\Currency\Currency.php | Строка: 20
-=================
-[2019-08-23 14:41:47] Текст ошибки: Class 'app\widgets\Currency\App' not found | Файл: C:\OSPanel\domains\PHP\app\widgets\Currency\Currency.php | Строка: 20
-=================
-[2019-08-23 14:43:18] Текст ошибки: Class 'app\widgets\Currency\App' not found | Файл: C:\OSPanel\domains\PHP\app\widgets\Currency\Currency.php | Строка: 20
-=================
-[2019-08-24 13:52:19] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-08-24 22:47:11] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+[2019-09-21 17:50:08] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
 =================
