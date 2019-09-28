@@ -22,28 +22,22 @@
 <div class="about">
     <div class="container">
         <div class="about-top grid-1">
-            <?php
-                foreach ($brands as $brand){
-                    ?>
-                    <div class="col-md-4 about-left">
-                        <figure class="effect-bubba">
-                            <img class="img-responsive" src="images/<?php echo $brand['img'];?>" alt=""/>
-                            <figcaption>
-                                <h2><?php echo $brand['title'];?></h2>
-                                <p><?php echo $brand['description'];?></p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <?php
-
-                }
-            ?>
-
+            <?php foreach($brands as $brand): ?>
+                <div class="col-md-4 about-left">
+                <figure class="effect-bubba">
+                    <img class="img-responsive" src="images/<?=$brand->img;?>" alt=""/>
+                    <figcaption>
+                        <h2><?=$brand->title;?></h2>
+                        <p><?=$brand->description;?></p>
+                    </figcaption>
+                </figure>
+            </div>
+            <?php endforeach; ?>
             <div class="clearfix"></div>
         </div>
     </div>
 </div>
-<?php endif;?>
+<?php endif; ?>
 <!--about-end-->
 <!--product-starts-->
 <?php if($hits): ?>
@@ -51,47 +45,26 @@
     <div class="container">
         <div class="product-top">
             <div class="product-one">
-                <?php
-                    foreach ($hits as $hit){
-                        ?>
-                        <div class="col-md-3 product-left">
-                            <div class="product-main simpleCart_shelfItem">
-                                <a href="product/<?php echo $hit['alias'];?>" class="mask"><img class="img-responsive zoom-img" src="images/<?php echo $hit['img'];?>" alt="<?php echo $hit['title'];?>" /></a>
-                                <div class="product-bottom">
-                                    <h3><a href="product/<?php echo $hit['alias'];?>"><?php echo $hit['title'];?></a></h3>
-                                    <p>Explore now</p>
-                                    <h4><a class="add-to-card-link" href="cart/add?id='<?php echo $hit['id'];?>"><i></i></a> <span class=" item_price"><?php echo $hit['price'];?>$</span>
-                                        <?php
-                                            if($hit['old_price']){
-                                                ?>
-                                                <small><del><?php echo $hit['old_price'];?></del>$</small>
-                                                <?php
-                                            }
-                                        ?>
-                                    </h4>
-
-                                </div>
-                                <?php
-                                if($hit['old_price']){
-                                    ?>
-                                    <div class="srch">
-                                        <span>
-                                            <?php
-                                                $prots = ($hit['price'] * 100) / $hit['old_price'];
-                                                $prots = 100 - $prots;
-                                                echo round($prots) . "%";
-                                            ?>
-                                        </span>
-                                    </div>
-                                    <?php
-                                }
-                                ?>
-
-                            </div>
+            <?php foreach($hits as $hit): ?>
+                <div class="col-md-3 product-left">
+                    <div class="product-main simpleCart_shelfItem">
+                        <a href="product/<?=$hit->alias;?>" class="mask"><img class="img-responsive zoom-img" src="images/<?=$hit->img;?>" alt="" /></a>
+                        <div class="product-bottom">
+                            <h3><a href="product/<?=$hit->alias;?>"><?=$hit->title;?></a></h3>
+                            <p>Explore Now</p>
+                            <h4>
+                                <a class="add-to-cart-link" href="cart/add?id=<?=$hit->id;?>"><i></i></a> <span class=" item_price">$ <?=$hit->price;?></span>
+                            <?php if($hit->old_price): ?>
+                                <small><del><?=$hit->old_price;?></del></small>
+                            <?php endif; ?>
+                            </h4>
                         </div>
-                        <?php
-                    }
-                ?>
+                        <div class="srch">
+                            <span>-50%</span>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
                 <div class="clearfix"></div>
             </div>
         </div>

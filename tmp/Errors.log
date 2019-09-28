@@ -272,53 +272,15 @@
 =================
 [2017-08-22 08:54:19] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-09-21 17:48:27] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
+[2017-08-22 12:09:30] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-09-21 17:48:27] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+[2017-08-22 12:09:30] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-09-21 17:50:01] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
+[2017-08-22 12:54:44] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-09-21 17:50:08] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
+[2017-08-22 13:12:46] Текст ошибки: Контроллер app\controllers\CartController не найден | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 36
 =================
-[2019-09-21 19:41:38] Текст ошибки: syntax error, unexpected '$hits' (T_VARIABLE) | Файл: C:\OSPanel\domains\PHP\app\views\Main\index.php | Строка: 58
+[2017-08-22 16:29:27] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
-[2019-09-21 19:42:24] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-21 19:42:35] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-21 19:42:59] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-21 19:43:24] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-21 19:43:57] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-21 20:00:07] Текст ошибки: syntax error, unexpected ')' | Файл: C:\OSPanel\domains\PHP\app\views\Main\index.php | Строка: 82
-=================
-[2019-09-28 13:05:25] Текст ошибки: Нет соединения с БД | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Db.php | Строка: 14
-=================
-[2019-09-28 13:05:25] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-28 13:19:05] Текст ошибки: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'By base DESC' at line 1 | Файл: C:\OSPanel\domains\PHP\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Строка: 186
-=================
-[2019-09-28 13:20:42] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-28 13:26:33] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:34] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:34] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:35] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:35] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:35] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:35] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:26:35] Текст ошибки: syntax error, unexpected ';', expecting ',' or ')' | Файл: C:\OSPanel\domains\PHP\app\controllers\AppController.php | Строка: 16
-=================
-[2019-09-28 13:49:21] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
-=================
-[2019-09-28 13:50:46] Текст ошибки: Страница не найдена | Файл: C:\OSPanel\domains\PHP\vendor\ishop\core\Router.php | Строка: 39
+[2017-08-22 16:29:27] Текст ошибки: Страница не найдена | Файл: D:\WebServer\domains\ishop2.loc\vendor\ishop\core\Router.php | Строка: 39
 =================
