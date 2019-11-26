@@ -12,10 +12,9 @@ class App
     public function __construct()
     {
         session_start();
-        echo $query = trim($_SERVER['QUERY_STRING'], '/');
         self::$app = Registry::instance(); //Хранение всех необхадимых параметров
         $this->getParams(); //заполняем контейнер данными
-
+        new ErrorHandler(); //Включаемобработчик ошибок
     }
 
     protected function getParams(){
