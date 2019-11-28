@@ -130,3 +130,13 @@
 --------------------------
 [2019-11-28 10:52:27] Message: Page was not found | File: C:\OSPanel\domains\php.com\public\index.php | Line: 6
 --------------------------
+[2019-11-28 11:45:13] Message: Page was not found | File: C:\OSPanel\domains\php.com\vendor\php\core\Router.php | Line: 35
+--------------------------
+[2019-11-28 11:45:23] Message: Page was not found | File: C:\OSPanel\domains\php.com\vendor\php\core\Router.php | Line: 35
+--------------------------
+[2019-11-28 12:02:08] Message: Class 'app\controllers\PageNewController' not found | File: C:\OSPanel\domains\php.com\vendor\php\core\Router.php | Line: 35
+--------------------------
+[2019-11-28 12:05:21] Message: Name controller was not found | File: C:\OSPanel\domains\php.com\vendor\php\core\Router.php | Line: 43
+--------------------------
+[2019-11-28 12:05:39] Message: Name controller was not found | File: C:\OSPanel\domains\php.com\vendor\php\core\Router.php | Line: 43
+--------------------------

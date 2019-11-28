@@ -4,6 +4,8 @@
 namespace php;
 
 
+use mysql_xdevapi\Exception;
+
 class Router
 {
 
@@ -28,13 +30,57 @@ class Router
 
     public static function dispatch($url){
         if(self::matchRoute($url)){
-            echo 'Ok';
+            $controller = 'app\controllers\\' . self::$route['prefix'] . self::$route['controller'] . 'Controller';
+            if(class_exists($controller)){
+                $controllerObject = new $controller(self::$route);
+                $action = self::lowerCase(self::$route['action']) . 'Action';
+                if(method_exists($controllerObject, $action)){
+                    $controllerObject->$action();
+                }else{
+                    throw new \Exception("Name action was not found", 404);
+                }
+            }else{
+                throw new \Exception("Name controller was not found", 404);
+            }
         }else{
-            echo 'No';
+            throw new \Exception("Page was not found", 404);
         }
     }
 
     public static function matchRoute($url){
-        return true;
+        foreach (self::$routes as $pattern => $route) {
+            if(preg_match("#{$pattern}#", $url, $matches)){
+                foreach ($matches as $k => $v){
+                    if(is_string($k)){
+                        $route[$k] = $v;
+                    }
+                }
+                if(empty($route['action'])){
+                    $route['action'] = 'index';
+                }
+                if(!isset($route['prefix'])){
+                    $route['prefix'] = '';
+                }else{
+                    $route['prefix'] .= '\\';
+                }
+                $route['controller'] = self::upperCase($route['controller']);
+                self::$route = $route;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //CamelCase - controller
+    protected static function upperCase($name){
+        $name = str_replace('-',' ', $name);
+        $name =ucwords($name); //Сделать все с большой буквы
+        $name = str_replace(' ','', $name);
+        return $name;
+    }
+
+    //camelCase - action
+    protected static function lowerCase($name){
+        return lcfirst(self::upperCase($name));
     }
 }
