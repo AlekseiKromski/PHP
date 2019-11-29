@@ -3,11 +3,12 @@
 
 namespace app\controllers;
 
-class MainController extends AppController
+class PageController extends AppController
 {
-    public function indexAction(){
+    public function viewAction(){
         debug($this->route);
         debug($this->controller);
         echo 'Helo';
     }
+
 }
