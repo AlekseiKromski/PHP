@@ -36,6 +36,7 @@ class Router
                 $action = self::lowerCase(self::$route['action']) . 'Action';
                 if(method_exists($controllerObject, $action)){
                     $controllerObject->$action();
+                    $controllerObject->getView();
                 }else{
                     throw new \Exception("Name action was not found", 404);
                 }

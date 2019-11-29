@@ -4,6 +4,8 @@
 namespace php\base;
 
 
+use mysql_xdevapi\Exception;
+
 class View
 {
     public $route;
@@ -29,4 +31,34 @@ class View
             $this->layout = $layout ?: LAYOUT;
         }
     }
+
+    public function render($data){
+        $viewFile = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
+        if(is_file($viewFile)){
+            ob_start();
+            require_once $viewFile;
+            $content = ob_get_clean();
+        }else{
+            throw new \Exception('Was not find view', 404);
+        }
+        if(false != $this->layout){
+            $layoutFile = APP . "/views/layouts/{$this->layout}.php";
+            if(is_file($layoutFile)){
+                require_once $layoutFile;
+            }else{
+                throw new \Exception('Was not find layout', 404);
+            }
+        }
+    }
+
+    public function getMeta()
+    {
+        echo $meta = "
+        <title>{$this->meta['title']}</title>
+        <meta name=\"description\" content=\"{$this->meta['desc']}\">
+        <meta name=\"Keywords\" content=\"{$this->meta['keywords']}\"> 
+        ";
+    }
+
+
 }
