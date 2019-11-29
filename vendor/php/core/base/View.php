@@ -33,6 +33,7 @@ class View
     }
 
     public function render($data){
+        debug($data);
         $viewFile = APP . "/views/{$this->prefix}{$this->controller}/{$this->view}.php";
         if(is_file($viewFile)){
             ob_start();
@@ -49,6 +50,7 @@ class View
                 throw new \Exception('Was not find layout', 404);
             }
         }
+
     }
 
     public function getMeta()
